@@ -1,0 +1,25 @@
+first_name,gender,age,race,borough,zipcode,number_of_children_in_household,other_parent_in_household,total_household_size,high_school_or_higher,employed,personal_income,homeowner,transportation,home_internet_access,incarceration,child_incarceration,victim of a crime,_child_victim of a crime,stopped_and_frisked
+steve,m,28,white,queens,11101,1,0,2,yes,yes,20001-35000,no,private,yes,no,no,yes,yes,no
+karen,f,36,white,brooklyn,11216,3,1,5,yes,yes,35001-50000,yes,public,yes,no,yes,yes,yes,no
+brian,m,24,black,bronx,10456,2,1,4,no,no,less_than_15000,no,public,yes,yes,no,no,no,yes
+michael,o,19,black,staten_island,10314,0,0,1,yes,no,less_than_15000,no,public,yes,yes,no,yes,no,yes
+larry,m,30,black,queens,11355,0,0,1,yes,yes,15000-20000,no,public,yes,yes,no,no,no,yes
+tamika,o,22,mixed,bronx,10460,0,0,1,yes,yes,less_than_15000,no,public,yes,yes,no,no,yes,yes
+sharon,f,21,black,brooklyn,11236,1,0,1,yes,yes,less_than_15000,no,public,yes,no,no,no,yes,yes
+kimberly,f,29,black,manhattan,10028,5,0,6,yes,yes,15000-20000,no,public,yes,no,no,yes,yes,no
+tawanda,f,26,mixed,manhattan,10013,2,0,3,yes,yes,15000-20000,no,public,yes,no,no,no,yes,no
+aminah,f,25,black,queens,11415,0,0,1,yes,yes,less_than_15000,no,public,yes,yes,no,no,yes,yes
+david,m,25,black,queens,11419,0,0,1,yes,yes,more_than_50000,yes,private,yes,no,no,yes,yes,yes
+carol,f,42,mixed,brooklyn,11204,4,1,6,yes,yes,20001-35000,no,private,yes,no,yes,yes,yes,yes
+muhammad,m,24,mixed,bronx,10461,2,1,4,yes,yes,20001-35000,no,public,yes,no,no,no,yes,no
+keith,m,23,black,bronx,11218,2,0,3,yes,yes,less_than_15000,no,public,yes,no,no,no,yes,yes
+andrea,f,27,hispanic,queens,11692,3,0,4,yes,no,less_than_15000,no,private,yes,no,no,no,no,yes
+zalika,f,18,mixed,brooklyn,11225,1,0,2,no,no,less_than_15000,no,public,yes,no,no,no,no,no
+hannah,f,44,hispanic,queens,11373,2,0,3,yes,yes,20001-35000,no,public,yes,yes,yes,yes,yes,yes
+armando,m,35,hispanic,manhattan,10003,2,1,4,yes,yes,less_than_15000,no,public,yes,no,yes,yes,yes,no
+luisa,f,24,asian,manhattan,10027,0,0,1,yes,yes,less_than_15000,no,private,yes,no,no,yes,yes,yes
+aida,f,23,hispanic,bronx,10454,0,0,1,yes,no,less_than_15000,no,public,yes,no,no,no,no,yes
+ciara,f,29,black,bronx,10452,3,0,4,yes,yes,20001-35000,no,public,yes,no,no,no,yes,yes
+griselda,f,48,hispanic,brooklyn,11220,3,1,5,no,no,less_than_15000,no,public,no,no,yes,no,no,no
+diana,f,46,mixed,staten_island,10306,3,0,4,yes,yes,35001-50000,no,public,yes,no,yes,no,yes,no
+javier,m,28,hispanic,queens,11104,1,0,2,yes,yes,less_than_15000,no,private,yes,yes,no,no,yes,yes
