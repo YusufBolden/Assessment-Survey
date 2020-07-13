@@ -1,6 +1,5 @@
-import pandas as pd
-import seaborn as sns
-import questionary
+import requests
+import json
 import sys
 
 
@@ -13,9 +12,9 @@ print("recipients for emergency resources and the method by which")
 print("resources would reach these residents in the fastest manner.\n")
 print("The following information is collected for statistical purposes and")
 print("will not be published, distributed or otherwise sold to any third party.\n")
-print("You must be a New York City resident between the ages of 18-50 to complete")
-print("this survey. A New York City resident is anyone who resides within the")
-print("5 boroughs of Brooklyn, Bronx, Manhattan, Queens and Staten Island.\n")
+print("You must be a United States resident between the ages of 18-50 to complete")
+print("this survey. A United States resident is anyone who resides within the")
+print("50 States.\n")
 print("This survey consists of 20 questions. The estimated time to complete this survey is 10 minutes.")
 print("Please take your time reading and answering each question. You will not be able to change your answers.\n")
 
@@ -23,19 +22,19 @@ name = input("What is your first name?\nPlease enter your name: ")
 print("Welcome", name.title())
 
 while True:
-    nycResident = input("Are you a resident of New York City?\n[Please enter Yes or No]: ")
-    if nycResident in ["Yes", "YES", "y", "Y", "yes"]:
-        print("Great! You are a New York City resident.")
+    USResident = input("Are you a resident of the United States?\n[Please enter Yes or No]: ")
+    if USResident in ["Yes", "YES", "y", "Y", "yes"]:
+        print("Great! You are a United States resident.")
         break
-    elif nycResident in ["No", "NO", "n", "N", "no"]:
-        print("Sorry! This survey is only for New York City residents.")
+    elif USResident in ["No", "NO", "n", "N", "no"]:
+        print("Sorry! This survey is only for United States residents.")
         while True:
-            nycResident = input("Are you a resident of New York City?\n[Please enter Yes or No]: ")
-            if nycResident in ["Yes", "YES", "y", "Y", "yes"]:
+            USResident = input("Are you a resident of the United States?\n[Please enter Yes or No]: ")
+            if USResident in ["Yes", "YES", "y", "Y", "yes"]:
                 print("Great! You are a New York City Resident")
                 break
-            elif nycResident in ["No", "NO", "n", "N", "no"]:
-                sys.exit("Sorry! This survey is only for New York City residents. Thanks for trying.")
+            elif USResident in ["No", "NO", "n", "N", "no"]:
+                sys.exit("Sorry! This survey is only for United States residents. Thanks for trying.")
             else:
                 print("Sorry! Invalid entry! Please try again")
         break
@@ -107,73 +106,24 @@ while True:
     else:
         print("Invalid entry! Please try again.")
 
-while True:
-    borough = input("In which borough do you reside:\n[Please enter Bronx, Brooklyn, Manhattan, Queens or Staten Island]: ")
-    if borough in ["Bronx", "bronx", "BX", "Bx", "bx", "Brooklyn",
-                "brooklyn", "BKLYN", "Bklyn", "bklyn", "BK", "bk", "MANHATTAN",
-                "Manhattan", "manhattan", "QUEENS", "Queens", "queens",
-                "STATEN ISLAND", "staten island", "Staten Island\n"]:
-        print("Great. You live in", borough.title())
-        break
-        while True:
-            if borough in ["Bronx", "bronx", "BX", "Bx", "bx", "Brooklyn",
-                    "brooklyn", "BKLYN", "Bklyn", "bklyn", "BK", "bk", "MANHATTAN",
-                    "Manhattan", "manhattan", "QUEENS", "Queens", "queens",
-                    "STATEN ISLAND", "staten island", "Staten Island\n"]:
-                print("Great. You live in", borough.title())
-            break
-        else:
-            sys.exit("Sorry! You must reside in Bronx, Brooklyn, Manhattan, Queens or Staten Island to complete this survey. Thank you for trying.")
-        break
-    else:
-        print("You must reside in Bronx, Brooklyn, Manhattan, Queens or Staten Island to complete this survey.")
+API_KEY = "JlfALuS6idZcTt2Cn5Z3FkUEosJSRkpfNnMV58w6PD3T971F0jUPuw087c0orm37"
 
 while True:
-    zipcode_Bronx = [10451, 10452, 10453, 10454, 10455, 10456, 10457, 10458, 10459,
-                    10460, 10461, 10462, 10463, 10464, 10465, 10466, 10467, 10468,
-                    10469, 10470, 10471, 10472, 10473, 10474, 10475]
 
-    zipcode_Brooklyn = [11212, 11213, 11216, 11233, 11238, 11209, 11214, 11228,
-                        11204, 11218, 11219, 11230, 11234, 11236, 11239, 11223,
-                        11224, 11229, 11235, 11201, 11205, 11215, 11217, 11231,
-                        11203, 11210, 11225, 11226, 11207, 11208, 11211, 11222,
-                        11220, 11232, 11206, 11221, 11237]
+  zipcode = input("What is your zip code?\nPlease enter your zip code: ")
 
-    zipcode_Manhattan = [10026, 10027, 10030, 10037, 10039, 10001, 10011, 10018,
-                        10019, 10020, 10036, 10029, 10035, 10010, 10016, 10017,
-                        10022, 10012, 10013, 10014, 10004, 10005, 10006, 10007,
-                        10038, 10280, 10002, 10003, 10009, 10021, 10028, 10044,
-                        10065, 10075, 10128, 10023, 10024, 10025]
+  api_url = "https://www.zipcodeapi.com/rest/" + API_KEY + "/info.json/" + zipcode + "/degrees"
 
-    zipcode_Queens = [11361, 11362, 11363, 11364, 11354, 11355, 11356, 11357,
-                      11358, 11359, 11360, 11365, 11366, 11367, 11412, 11423,
-                      11101, 11102, 11103, 11104, 11105, 11106, 11374, 11375,
-                      11379, 11385, 11691, 11692, 11693, 11694, 11695, 11697,
-                      11004, 11005, 11411, 11413, 11422, 11426, 11427, 11428,
-                      11429, 11414, 11415, 11416, 11417, 11418, 11419, 11420,
-                      11421, 11368, 11369, 11370, 11372, 11373, 11377, 11378]
+  response = requests.get(api_url)
+  if response.status_code == 200:
+    break
+  print("Invalid entry! Please try again.")
 
-    zipcode_StatenIsland = [10301, 10302, 10303, 10304, 10305, 10306, 10307,
-                            10308, 10309, 10310, 10312, 10314]
+datastore = json.loads(response.content)
 
-    zipcode = int(input("What is your zip code?\nPlease enter your zip code: "))
-    if borough in ["BRONX", "Bronx", "bronx", "BX", "Bx", "bx"] and zipcode in zipcode_Bronx:
-        print(f"Great! You live in {borough.title()} and your zipcode is {zipcode}.")
-        break
-    elif borough in ["BROOKLYN", "Brooklyn", "brooklyn", "BKLYN", "Bklyn", "bklyn", "BK", "Bk", "bk"] and zipcode in zipcode_Brooklyn:
-        print(f"Great! You live in {borough.title()} and your zipcode is {zipcode}.")
-        break
-    elif borough in ["MANHATTAN", "Manhattan", "manhattan"] and zipcode in zipcode_Manhattan:
-        print(f"Great! You live in {borough.title()} and your zipcode is {zipcode}.")
-        break
-    elif borough in ["QUEENS", "Queens", "queens"] and zipcode in zipcode_Queens:
-        print(f"Great! You live in {borough.title()} and your zipcode is {zipcode}.")
-        break
-    elif borough in ["STATEN ISLAND", "staten island", "Staten Island"] and zipcode in zipcode_StatenIsland:
-        print(f"Great! You live in {borough.title()} and your zipcode is {zipcode}.")
-        break
-    else:
-        print("Borough and zip code do not match. Please enter a valid Borough and zip code combination")
+input_city = datastore['city']
+
+print(f"Great! You live in {input_city} and your zipcode is {zipcode}.")
 
 while True:
     number_of_chidren_in_household = int(input("How many children under 18 years' old reside in your household?\n[Please enter a number]: "))
@@ -296,6 +246,9 @@ while True:
         print("Invalid entry! Please try again.")
 
 while True:
+    if number_of_chidren_in_household == 0:
+        child_incarceration = 0
+        break
     child_incarceration = input("Have any of your children ever been arrested or incarcerated in a City, County, State or Federal jail or prison?[Enter 0 if you do not have children]\n[Please enter yes, no or 0]: ")
     if child_incarceration in ["Yes", "YES", "y", "Y", "yes"]:
         print("You entered YES you have at least one child who has been incarcerated.")
@@ -321,6 +274,9 @@ while True:
         print("Invalid entry! Please try again.")
 
 while True:
+    if number_of_chidren_in_household == 0:
+        child_victim_of_crime = 0
+        break
     child_victim_of_crime = input("Have any of your children ever been the victim of a crime?[Enter 0 if you do not have children]\n[Please enter yes, no or 0]: ")
     if child_victim_of_crime in ["Yes", "YES", "y", "Y", "yes"]:
         print("You entered YES you have at least one child who has been the victim of a crime.")
