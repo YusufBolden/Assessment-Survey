@@ -1,25 +1,32 @@
-first_name,gender,age,race,borough,zipcode,number_of_children_in_household,other_parent_in_household,total_household_size,high_school_or_higher,employed,personal_income,homeowner,transportation,home_internet_access,incarceration,child_incarceration,victim of a crime,_child_victim of a crime,stopped_and_frisked
-steve,m,28,white,queens,11101,1,0,2,yes,yes,20001-35000,no,private,yes,no,no,yes,yes,no
-karen,f,36,white,brooklyn,11216,3,1,5,yes,yes,35001-50000,yes,public,yes,no,yes,yes,yes,no
-brian,m,24,black,bronx,10456,2,1,4,no,no,less_than_15000,no,public,yes,yes,no,no,no,yes
-michael,o,19,black,staten_island,10314,0,0,1,yes,no,less_than_15000,no,public,yes,yes,no,yes,no,yes
-larry,m,30,black,queens,11355,0,0,1,yes,yes,15000-20000,no,public,yes,yes,no,no,no,yes
-tamika,o,22,mixed,bronx,10460,0,0,1,yes,yes,less_than_15000,no,public,yes,yes,no,no,yes,yes
-sharon,f,21,black,brooklyn,11236,1,0,1,yes,yes,less_than_15000,no,public,yes,no,no,no,yes,yes
-kimberly,f,29,black,manhattan,10028,5,0,6,yes,yes,15000-20000,no,public,yes,no,no,yes,yes,no
-tawanda,f,26,mixed,manhattan,10013,2,0,3,yes,yes,15000-20000,no,public,yes,no,no,no,yes,no
-aminah,f,25,black,queens,11415,0,0,1,yes,yes,less_than_15000,no,public,yes,yes,no,no,yes,yes
-david,m,25,black,queens,11419,0,0,1,yes,yes,more_than_50000,yes,private,yes,no,no,yes,yes,yes
-carol,f,42,mixed,brooklyn,11204,4,1,6,yes,yes,20001-35000,no,private,yes,no,yes,yes,yes,yes
-muhammad,m,24,mixed,bronx,10461,2,1,4,yes,yes,20001-35000,no,public,yes,no,no,no,yes,no
-keith,m,23,black,bronx,11218,2,0,3,yes,yes,less_than_15000,no,public,yes,no,no,no,yes,yes
-andrea,f,27,hispanic,queens,11692,3,0,4,yes,no,less_than_15000,no,private,yes,no,no,no,no,yes
-zalika,f,18,mixed,brooklyn,11225,1,0,2,no,no,less_than_15000,no,public,yes,no,no,no,no,no
-hannah,f,44,hispanic,queens,11373,2,0,3,yes,yes,20001-35000,no,public,yes,yes,yes,yes,yes,yes
-armando,m,35,hispanic,manhattan,10003,2,1,4,yes,yes,less_than_15000,no,public,yes,no,yes,yes,yes,no
-luisa,f,24,asian,manhattan,10027,0,0,1,yes,yes,less_than_15000,no,private,yes,no,no,yes,yes,yes
-aida,f,23,hispanic,bronx,10454,0,0,1,yes,no,less_than_15000,no,public,yes,no,no,no,no,yes
-ciara,f,29,black,bronx,10452,3,0,4,yes,yes,20001-35000,no,public,yes,no,no,no,yes,yes
-griselda,f,48,hispanic,brooklyn,11220,3,1,5,no,no,less_than_15000,no,public,no,no,yes,no,no,no
-diana,f,46,mixed,staten_island,10306,3,0,4,yes,yes,35001-50000,no,public,yes,no,yes,no,yes,no
-javier,m,28,hispanic,queens,11104,1,0,2,yes,yes,less_than_15000,no,private,yes,yes,no,no,yes,yes
+first_name,gender,age,race,city,state,zipcode,number_of_children_in_household,other_parent_in_household,total_household_size,high_school_or_higher,employed,personal_income,homeowner,transportation,home_internet_access,incarceration,child_incarceration,victim_of_crime,child_victim_of_crime,stopped_and_frisked
+steve,male,28,white,Queens,NY,11101,1,no,2,y,y,20001-35000,n,private,y,n,n,y,yes,no
+karen,female,36,white,Brooklyn,NY,11216,3,yes,5,y,y,35001-50000,y,public,y,n,y,y,yes,no
+brian,male,24,black,Bronx,NY,10456,2,yes,4,n,n,less_than_15000,n,public,y,y,n,n,no,yes
+michael,other,19,black,Staten Island,NY,10314,0,no,1,y,n,less_than_15000,n,public,y,y,n,y,no,yes
+larry,male,30,black,Queens,NY,11355,0,no,1,y,y,15000-20000,n,public,y,y,n,n,no,yes
+tamika,other,22,mixed,Bronx,NY,10460,0,no,1,y,y,less_than_15000,n,public,y,y,n,n,yes,yes
+sharon,female,21,black,Brooklyn,NY,11236,1,no,1,y,y,less_than_15000,n,public,y,n,n,n,yes,yes
+kimberly,female,29,black,Manhattan,NY,10028,5,no,6,y,y,15000-20000,n,public,y,n,n,y,yes,no
+tawanda,female,26,mixed,Manhattan,NY,10013,2,no,3,y,y,15000-20000,n,public,y,n,n,n,yes,no
+aminah,female,25,black,Queens,NY,11415,0,no,1,y,y,less_than_15000,n,public,y,y,n,n,yes,yes
+david,male,25,black,Queens,NY,11419,0,no,1,y,y,more_than_50000,y,private,y,n,n,y,yes,yes
+carol,female,42,mixed,Brooklyn,NY,11204,4,yes,6,y,y,20001-35000,n,private,y,n,y,y,yes,yes
+muhammad,male,24,mixed,Bronx,NY,10461,2,yes,4,y,y,20001-35000,n,public,y,n,n,n,yes,no
+keith,male,23,black,Bronx,NY,11218,2,no,3,y,y,less_than_15000,n,public,y,n,n,n,yes,yes
+andrea,female,27,hispanic,Queens,NY,11692,3,no,4,y,n,less_than_15000,n,private,y,n,n,n,no,yes
+zalika,female,18,mixed,Brooklyn,NY,11225,1,no,2,n,n,less_than_15000,n,public,y,n,n,n,no,no
+hannah,female,44,hispanic,Queens,NY,11373,2,no,3,y,y,20001-35000,n,public,y,y,y,y,yes,yes
+armando,male,35,hispanic,Manhattan,NY,10003,2,yes,4,y,y,less_than_15000,n,public,y,n,y,y,yes,no
+luisa,female,24,asian,Manhattan,NY,10027,0,no,1,y,y,less_than_15000,n,private,y,n,n,y,yes,yes
+aida,female,23,hispanic,Bronx,NY,10454,0,no,1,y,n,less_than_15000,n,public,y,n,n,n,no,yes
+ciara,female,29,black,Bronx,NY,10452,3,no,4,y,y,20001-35000,n,public,y,n,n,n,yes,yes
+griselda,female,48,hispanic,Brooklyn,NY,11220,3,yes,5,n,n,less_than_15000,n,public,n,n,y,n,no,no
+diana,female,46,mixed,Staten Island,NY,10306,3,no,4,y,y,35001-50000,n,public,y,n,y,n,yes,no
+javier,male,28,hispanic,Queens,NY,11104,1,no,2,y,y,less_than_15000,n,private,y,y,n,n,yes,yes
+julia,female,36,mixed,Keeling,VA,24566,1,yes,3,y,y,3,y,private,y,n,n,n,n,n
+lisa,female,34,asian,Elgin,IL,60123,1,no,2,yes,yes,5,yes,1,yes,no,no,yes,no,no
+michael,male,43,white,Norwood,CO,81423,0,0,2,y,y,4,y,1,y,n,0,y,0,n
+kimberly,female,33,black,Dry Prong,LA,71423,3,n,5,n,n,2,n,0,y,y,y,y,y,n
+keith,male,33,black,Bland,VA,24315,2,y,4,y,y,4,y,1,y,n,n,y,n,n
+mary,female,48,white,Barstow,CA,92312,3,y,5,y,n,1,y,1,y,n,n,y,y,n
+Jerry,male,33,native american,Holland,KY,42153,2,n,3,y,n,3,y,1,y,n,n,y,n,n
