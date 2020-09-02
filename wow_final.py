@@ -33,7 +33,7 @@ while True:
         while True:
             USResident = input("Are you a resident of the United States?\n[Please enter Yes or No]: ")
             if USResident in ["Yes", "YES", "y", "Y", "yes"]:
-                print("Great! You are a New York City Resident")
+                print("Great! You are a United States Resident")
                 break
             elif USResident in ["No", "NO", "n", "N", "no"]:
                 sys.exit("Sorry! This survey is only for United States residents. Thanks for trying.")
@@ -80,25 +80,22 @@ while True:
     else:
         print("Invalid entry! Please try again.")
 
-while True:
-    age = int(input("Please enter your age: [Age must be between 18 and 50]\nPlease enter your age: "))
-    if age >= 18 and age <= 50:
-        print(f"Great! Your age is {age}, which is within the correct range.")
-        break
-        while True:
-            age = int(input("Please enter your age:[Age must be between 18 and 50]\nPlease enter your age: "))
-            if age >= 18 and age <= 50:
-                print(f"Great! Your age is {age}, which is within the correct range.")
-                break
-            elif age < 18 or age > 50:
-                sys.exit("Sorry! This survey is only for persons between the ages of 18 and 50. Thank you for trying.")
-            else:
-                print("Invalid entry! Please try again.")
-        break
-    elif age < 18 and age > 50:
-        print("Entry is not within age range! Please try again.")
-    else:
-        print("Invalid entry! Please try again.")
+def inputNumber(message):
+    while True:
+        try:
+            userInput = int(input(message))
+        except ValueError :
+            print("Invalid entry! Please try again.")
+            continue
+        else:
+            return userInput
+            break
+
+age = inputNumber("Please enter your age: [Age must be between 18 and 50]\nPlease enter your age: ")
+if age >= 18 and age <= 50:
+    print(f"Great! Your age is {age}, which is within the correct range.")
+else:
+    print("Invalid entry! Please try again.")
 
 while True:
     race = input("Which of the following best describes your race or ethnicity?\n[Please enter White, Black, Hispanic, Asian, Native American, Mixed or Other]: ")
@@ -192,12 +189,15 @@ while True:
     else:
         print("Invalid entry! Please try again.")
 while True:
-    personal_income = int(input("Which is your personal income?\n[Please enter whole number than identifes your current income]: "))
+    personal_income = int(input("What is your personal income?\n[Please enter whole number than identifes your current income without using any commas, spaces or decimal]: "))
+    def is_digit(personal_income):
+        if personal_income.isdigit():
+            print(f"You entered your personal income as {personal_income}")
+        else:
+            print("Invalid entry! Please enter a whole number that represents your current personal income.")
     print(f"You entered your current income is ${personal_income}.")
-        break
+    break
 
-    else:
-        print("Invalid entry! Please enter a number from 1 to 5 than represents your current personal income.")
 
 while True:
     homeowner = input("Do you own your home?\n[Please enter yes or no]: ")
