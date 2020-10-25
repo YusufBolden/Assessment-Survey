@@ -246,3 +246,6 @@ df = df.append(s, ignore_index=True)
 
 df.to_csv(wowDataFinal, mode='w', index=False)
 ```
+## Data Analysis
+### Reading the data
+
