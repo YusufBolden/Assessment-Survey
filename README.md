@@ -284,5 +284,5 @@ sns.heatmap(correlations, cmap ='Blues')
 ### Running a linear model
 sns.lmplot(data = df, x = 'total_household_size', y = 'personal_income')
 
-![](iamges/seaborn_lineal_model.png)
+![](images/seaborn_lineal_model.png)
 
