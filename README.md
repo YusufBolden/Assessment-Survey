@@ -1,12 +1,14 @@
-# Using Python to conduct a survey - Antwan Bolden and Kevin Campfield
+# Using Python to conduct a survey
+# Antwan Bolden
+# May 8, 2020
 
 For this project we are taking users' inputs to a survey and adding them to a dataframe. This type of survey can serve many real-world purposes such as aiding city or school officials assessing a districts' priority recipients for emergency resources and the method by which resources would reach these residents in the fastest manner. 
-
-An example usage would have been implemented in a school board's decision to close its entire school system in response to COVID-19. Many school distrcits made this decision and presumed every household within the district had access to the necessary resources to replicate the classromm in a mobile environment.
 
 According to usafacts.org, 4.4 million households with children don’t have consistent access to computers for online learning during the pandemic. The following graph shows the percent of student in households with no internet or computer access by income.
 
 ![According to usafacts.org, 4.4 million households with children don’t have consistent access to computers for online learning during the pandemic](https://usafactscms.azureedge.net/media/images/Tech_access_Wst00xE.width-1200.png "Percent of students in households with no internet or computer access by income")
+
+An example usage of this survey could have been implemented in school boards' decisions to close their entire school system in response to COVID-19. Many school distrcits made this decision and presumed every household within the district had access to the necessary resources to replicate the classromm in a mobile environment.
 
 # Explanation of the code
 
@@ -50,3 +52,7 @@ while True:
         break
     else:
         print("Sorry! Invalid entry! Please try again")
+
+# Validating number inputs
+
+There are 5 questions which require the users to input numbers. To ensure the users' input is a valid number (not a negative number or containing letters, symbols or decimals), we have utlized the function displayed in Example 2. This function is written at the top of code file and given the name 'inputNumber' and it applies to any questions that call that function. The function inputNumber checks that the user inputs an integer. Any acceptable answer is received and the code will break to continue to the next question. Any input that is not an integer returns the error message. The code in Question 4 also returns an error message if the user's input age is not within the inclusice range 18-50.
