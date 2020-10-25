@@ -152,7 +152,7 @@ while True:
 ```
 ### Using a Tenary Operator
 
-In checking to ensure the user's total household number meets the `minimum expected value` (user + number of children + other parent if applicable), the numbers cannot be added using the current inputs. The number of children is a number, other parent in household is answered using a string 'yes' or 'no' and there is no count for the user. Thus, a number and a string cannot be added. Therefore, a `tenary operator` (value_if_true if condition else value_if_false) is used to convert the string 'yes' or 'no' answer to a number. This tenary operator is utilized in calculating the minimum expected value for total household size as (number_of_children_in_household + (1 if other_parent_in_household == 'y' else 0) + 1) where (1 if other_parent_in_household == 'y' else 0) translates as if the user answers yes to other_parent_in_household, then add 1, otherwise add 0. The + 1 at the end of the equation represents the user. Supposing the user indicates 2 children in the household and the other parent does not reside in the household, the minimum acceptable household size is (2 + 0 + 1) = 3. If the user inputs a number less than 3, an error message is generated and the user will have to input at least the minimum expected number.
+In checking to ensure the user's total household number meets the `minimum expected value` (user + number of children + other parent if applicable), the numbers cannot be added using the current inputs. The number of children is a number, other parent in household is answered using a string 'yes' or 'no' and there is no count for the user. Thus, a number and a string cannot be added. Therefore, a `tenary operator` (value_if_true if condition else value_if_false) is used to convert the string 'yes' or 'no' answer to a number. This `tenary operator` is utilized in calculating the `minimum expected value` for total household size as (number_of_children_in_household + (1 if other_parent_in_household == 'y' else 0) + 1) where (1 if other_parent_in_household == 'y' else 0) translates as if the user answers yes to other_parent_in_household, then add 1, otherwise add 0. The + 1 at the end of the equation represents the user. Supposing the user indicates 2 children in the household and the other parent does not reside in the household, the minimum acceptable household size is (2 + 0 + 1) = 3. If the user inputs a number less than 3, an error message is generated and the user will have to input at least the minimum expected number.
 ```
 # Example 6
 
@@ -250,3 +250,35 @@ df.to_csv(wowDataFinal, mode='w', index=False)
 ### Reading the data
 
 Although there are numberous package managers and environment managers avaiable, [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/) is a platform that offers package and environment management dependencies in one platform. Installation instructions can be found [here](https://docs.anaconda.com/anaconda/install/). Once installation is complete, the command `jupyter notebook` can be run from the terminal to initialize and open Jupyter Notebook in the web browswer.
+
+df = pd.read_csv('wowDataFinal.csv', index_col=0)
+# This will bring the CSV file into jupyter notebook
+
+df
+# this will display the entire dataframe
+
+df.head()
+# shows the first 5 rows
+
+df.tail()
+# shows the last 5 rows
+
+df.shape
+# shows the total number of rows, columns
+# each row represents the user's inputs
+# each column corresponds to a question in the survey
+
+## Plotting data with Seaborn
+import seaborn as sns
+%matplotlib inline
+
+sns.pairplot(data = df, vars = ['age', 'gender', 'personal_income', 'incarceration'])
+# Plotting to inspect for any correlation to age, personal income and incarceration
+
+### Using a Matplotlib heatmap to analyze the data
+
+correlations = df.corr()
+
+sns.heatmap(correlations, cmap ='Blues')
+
+### Running a linear model
