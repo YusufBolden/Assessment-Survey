@@ -1,5 +1,4 @@
-# Using Python to conduct a survey
-# Antwan Bolden
+# Using Python to conduct a survey by Antwan Bolden
 # May 8, 2020
 
 For this project we are taking users' inputs to a survey and adding them to a dataframe. This type of survey can serve many real-world purposes such as aiding city or school officials assessing a districts' priority recipients for emergency resources and the method by which resources would reach these residents in the fastest manner. 
@@ -10,7 +9,7 @@ According to usafacts.org, 4.4 million households with children don’t have con
 
 An example usage of this survey could have been implemented in school boards' decisions to close their entire school system in response to COVID-19. Many school distrcits made this decision and presumed every household within the district had access to the necessary resources to replicate the classromm in a mobile environment.
 
-# Explanation of the code
+### Explanation of the code
 
 The following libraries were imported:
 
