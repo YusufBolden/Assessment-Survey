@@ -4,6 +4,8 @@ For this project we are taking users' inputs to a survey and adding them to a da
 
 An example usage would have been implemented in a school board's decision to close its entire school system in response to COVID-19. Many school distrcits made this decision and presumed every household within the district had access to the necessary resources to replicate the classromm in a mobile environment.
 
+According to usafacts.org, 4.4 million households with children don’t have consistent access to computers for online learning during the pandemic. The following graph shows the percent of student in households with no internet or computer access by income.
+
 ![According to usafacts.org, 4.4 million households with children don’t have consistent access to computers for online learning during the pandemic](https://usafactscms.azureedge.net/media/images/Tech_access_Wst00xE.width-1200.png "Percent of students in households with no internet or computer access by income")
 
 # Explanation of the code
