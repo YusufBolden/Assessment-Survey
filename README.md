@@ -248,5 +248,5 @@ df.to_csv(wowDataFinal, mode='w', index=False)
 ```
 ## Data Analysis
 ### Reading the data
-)
-While there are numberous package managers and environment managers avaiable, [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/) is a platform that offers package and environment management dependencies in one platform. Installation instructions can be found [here](https://docs.anaconda.com/anaconda/install/)
+
+Although there are numberous package managers and environment managers avaiable, [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/) is a platform that offers package and environment management dependencies in one platform. Installation instructions can be found [here](https://docs.anaconda.com/anaconda/install/). Once installation is complete, the command `jupyter notebook` can be run from the terminal to initialize and open Jupyter Notebook in the web browswer.
