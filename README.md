@@ -259,17 +259,10 @@ Once the `Jupyter Notebook` setup is completed and the `wow_final.py file is ope
 
     3. To view a portion of the code from the top, `df.head()` can be run. The default value will display the first 5 rows. To view a specific number, enter `df.head(N)` where N represents the number of desired rows to view.
 
+    4. Viewing portions of the code from the bottom follows the same pattern as viewing the code from the top. Entering `df.tail()` will return the last 5 items in the CSV.
 
-### This shows the first 5 rows of the dataframe
-df.head()
-### This shows the last 5 rows of the dataframe.
-df.tail()
+    5. To find the total number of rows and columns, enter `df.shape`. The returned values will display the rows, columns in that order where each row represents the user's inputs and each column corresponds to a question in the survey.
 
-
-df.shape
-### shows the total number of rows, columns
-### each row represents the user's inputs
-### each column corresponds to a question in the survey
 
 ## Plotting data with Seaborn
 import seaborn as sns
