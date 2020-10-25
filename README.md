@@ -265,13 +265,14 @@ Once the `Jupyter Notebook` setup is completed and the `wow_final.py file is ope
 
 ### Plotting data with Seaborn
 Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. (Instructions and technical details on how to use [Seaborn](https://seaborn.pydata.org/introduction.html))
+```
+Example of how to plot and inspect for any correlation to age, personal income and incarceration:
 
 import seaborn as sns
 %matplotlib inline
-
 sns.pairplot(data = df, vars = ['age', 'gender', 'personal_income', 'incarceration'])
-# Plotting to inspect for any correlation to age, personal income and incarceration
-
+```
+![ScreenShot](Screenshot.jpg)
 ### Using a Matplotlib heatmap to analyze the data
 
 correlations = df.corr()
