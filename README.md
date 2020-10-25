@@ -263,8 +263,9 @@ Once the `Jupyter Notebook` setup is completed and the `wow_final.py file is ope
 
 5. To find the total number of rows and columns, enter `df.shape`. The returned values will display the rows, columns in that order where each row represents the user's inputs and each column corresponds to a question in the survey.
 
+### Plotting data with Seaborn
+Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. (Instructions and technical details on how to use [Seaborn](https://seaborn.pydata.org/introduction.html))
 
-## Plotting data with Seaborn
 import seaborn as sns
 %matplotlib inline
 
