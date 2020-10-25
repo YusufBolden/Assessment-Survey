@@ -249,4 +249,4 @@ df.to_csv(wowDataFinal, mode='w', index=False)
 ## Data Analysis
 ### Reading the data
 )
-While there are numberous package and environment managers avaiable, [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/)
+While there are numberous package managers and environment managers avaiable, [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/) [explains why it is the best](https://docs.anaconda.com/anaconda/navigator/#why-use-navigator)
