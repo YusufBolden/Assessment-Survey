@@ -69,9 +69,8 @@ def inputNumber(message):
             print("Invalid entry! Please try again.")
 
     return userInput
-```
-```
-### Question 4
+
+Question 4
 
 while True:
     age = inputNumber("Please enter your age: [Age must be a number between 18 and 50]\nPlease enter your age: ")
@@ -154,7 +153,7 @@ while True:
 ```
 ### Using a Tenary Operator
 
-In checking to ensure the user's total household number meets the minimum expected value (user + number of children + other parent if applicable), the numbers cannot be added using the current inputs. The number of children is a number, other parent in household is answered using a string 'yes' or 'no' and there is no count for the user. Thus, a number and a string cannot be added. Therefore, a tenary operator (value_if_true if condition else value_if_false) is used to convert the string 'yes' or 'no' answer to a number. This tenary operator is utilize in calculating the minimum expected value for total household size as (number_of_children_in_household + (1 if other_parent_in_household == 'y' else 0) + 1) where (1 if other_parent_in_household == 'y' else 0) translates as if the user answers yes to other_parent_in_household, then add 1, otherwise add 0. The + 1 at the end of the equation represents the user. Supposing the user indicates 2 children in the household and the other parent does not reside in the household, the minimum acceptable household size is (2 + 0 + 1) = 3. If the user inputs a number less than 3, an error message is generated and the user will have to input at least the minimum expected number.
+In checking to ensure the user's total household number meets the minimum expected value (user + number of children + other parent if applicable), the numbers cannot be added using the current inputs. The number of children is a number, other parent in household is answered using a string 'yes' or 'no' and there is no count for the user. Thus, a number and a string cannot be added. Therefore, a tenary operator (value_if_true if condition else value_if_false) is used to convert the string 'yes' or 'no' answer to a number. This tenary operator is utilized in calculating the minimum expected value for total household size as (number_of_children_in_household + (1 if other_parent_in_household == 'y' else 0) + 1) where (1 if other_parent_in_household == 'y' else 0) translates as if the user answers yes to other_parent_in_household, then add 1, otherwise add 0. The + 1 at the end of the equation represents the user. Supposing the user indicates 2 children in the household and the other parent does not reside in the household, the minimum acceptable household size is (2 + 0 + 1) = 3. If the user inputs a number less than 3, an error message is generated and the user will have to input at least the minimum expected number.
 ```
 # Example 6
 
@@ -201,4 +200,35 @@ while True:
     else:
         print(f"Your entered your total_household_size is {total_household_size}.")
         break
+```
+## Writing to the CSV
+### Naming the columns
+
+The name of the CSV file is defined at the top of the code as wowDataFinal = 'wowDataFinal.csv'. At the completion of the survey, the user's answers are then stored in variables as it appears in Example 7. the 's' represent a column in the CSV file that is created using the pd.Series.
+```
+Example 7 
+
+s = pd.Series(dtype=str)
+
+s['first_name'] = name
+s['gender'] = gender
+s['age'] = age
+s['race'] = race
+s['city'] = input_city
+s['state'] = input_state
+s['zipcode'] = zipcode
+s['number_of_children_in_household'] = number_of_children_in_household
+s['other_parent_in_household'] = other_parent_in_household
+s['total_household_size'] = total_household_size
+s['high_school_or_higher'] = high_school_or_higher
+s['employed'] = employed
+s['personal_income'] = personal_income
+s['homeowner'] = homeowner
+s['transportation'] = transportation
+s['home_internet_access'] = home_internet_access
+s['incarceration'] = incarceration
+s['child_incarceration'] = child_incarceration
+s['victim_of_crime'] = victim_of_crime
+s['child_victim_of_crime'] = child_victim_of_crime
+s['stopped_and_frisked'] = stopped_and_frisked
 ```
