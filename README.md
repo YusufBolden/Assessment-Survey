@@ -253,15 +253,15 @@ Although there are numberous package managers and environment managers avaiable,
 
 Once the `Jupyter Notebook` setup is completed and the `wow_final.py file is opened`, the data collected and stored in the `CSV` can be analyzed using the following process:
 
-    1. Typing `df = pd.read_csv('wowDataFinal.csv', index_col=0)` will make the `CSV` file accessible in the jupyter notebook.
+1. Typing `df = pd.read_csv('wowDataFinal.csv', index_col=0)` will make the `CSV` file accessible in the jupyter notebook.
 
-    2. Entering `df` in the next field will display the entire dataframe.
+2. Entering `df` in the next field will display the entire dataframe.
 
-    3. To view a portion of the code from the top, `df.head()` can be run. The default value will display the first 5 rows. To view a specific number, enter `df.head(N)` where N represents the number of desired rows to view.
+3. To view a portion of the code from the top, `df.head()` can be run. The default value will display the first 5 rows. To view a specific number, enter `df.head(N)` where N represents the number of desired rows to view.
 
-    4. Viewing portions of the code from the bottom follows the same pattern as viewing the code from the top. Entering `df.tail()` will return the last 5 items in the CSV.
+4. Viewing portions of the code from the bottom follows the same pattern as viewing the code from the top. Entering `df.tail()` will return the last 5 items in the CSV.
 
-    5. To find the total number of rows and columns, enter `df.shape`. The returned values will display the rows, columns in that order where each row represents the user's inputs and each column corresponds to a question in the survey.
+5. To find the total number of rows and columns, enter `df.shape`. The returned values will display the rows, columns in that order where each row represents the user's inputs and each column corresponds to a question in the survey.
 
 
 ## Plotting data with Seaborn
