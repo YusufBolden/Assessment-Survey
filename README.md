@@ -272,17 +272,17 @@ import seaborn as sns
 %matplotlib inline
 sns.pairplot(data = df, vars = ['age', 'gender', 'personal_income', 'incarceration'])
 ```
-![](images/screenshot.png)
+![Pairplot](images/screenshot.png)
 
 ### Using a Matplotlib heatmap to analyze the data
 correlations = df.corr()
 sns.heatmap(correlations, cmap ='Blues')
 (Note: color changes to heat map can be made by changing the color value of `cmap`)
 
-![](images/matplotlib_heatmap.png)
+![Heatmap](images/matplotlib_heatmap.png)
 
 ### Running a linear model
 sns.lmplot(data = df, x = 'total_household_size', y = 'personal_income')
 
-![](images/seaborn_lineal_model.png)
+![Linear Model](images/seaborn_linear_model.png)
 
