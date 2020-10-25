@@ -28,10 +28,10 @@ The following libraries were imported:
 ### Checking Yes/No inputs
 
 After the intial question, which asks the user to input the user's name, each subsequent question is contolled by a while loop and within each while loop are if/else statements that contol the output (response to user). The first two (2) questions contain a while loop within the while loop that gives the user two (2) attemps to correctly answer the qualifying question. Should user fail to qualify on either question, the system will exit via sys.exit as shown below in Example 1. When a user's input is accepted, the While loop breaks and moves on to the next question.
-
-#### EXAMPLE 1
-### Question 2
 ```
+### EXAMPLE 1
+### Question 2
+
 while True:
     USResident = input("Are you a resident of the United States?\n[Please enter Yes or No]: ")
     if USResident in ["Yes", "YES", "y", "Y", "yes"]:
@@ -56,9 +56,9 @@ while True:
 ### Validating number inputs
 
 There are 5 questions which require the users to input numbers. To ensure the users' input is a valid number (not a negative number or containing letters, symbols or decimals), we have utlized the function displayed in Example 2. This function is written at the top of code file and given the name 'inputNumber' and it applies to any questions that call that function. The function inputNumber checks that the user inputs an integer. Any acceptable answer is received and the code will break to continue to the next question. Any input that is not an integer returns the error message. The code in Question 4 also returns an error message if the user's input age is not within the inclusice range 18-50.
-
-### EXAMPLE 2
 ```
+### EXAMPLE 2
+
 def inputNumber(message):
     while True:
         try:
@@ -69,8 +69,9 @@ def inputNumber(message):
 
     return userInput
 ```
-### Question 4
 ```
+### Question 4
+
 while True:
     age = inputNumber("Please enter your age: [Age must be a number between 18 and 50]\nPlease enter your age: ")
     if age >= 18 and age <= 50:
@@ -148,5 +149,55 @@ while True:
         break
     else:
         print("Invalid entry! Please try again.")
+        break
+```
+### Using a Tenary Operator
+
+In checking to ensure the user's total household number meets the minimum expected value (user + number of children + other parent if applicable), the numbers cannot be added using the current inputs. The number of children is a number, other parent in household is answered using a string 'yes' or 'no' and there is no count for the user. Thus, a number and a string cannot be added. Therefore, a tenary operator (value_if_true if condition else value_if_false) is used to convert the string 'yes' or 'no' answer to a number. This tenary operator is utilize in calculating the minimum expected value for total household size as (number_of_children_in_household + (1 if other_parent_in_household == 'y' else 0) + 1) where (1 if other_parent_in_household == 'y' else 0) translates as if the user answers yes to other_parent_in_household, then add 1, otherwise add 0. The + 1 at the end of the equation represents the user. Supposing the user indicates 2 children in the household and the other parent does not reside in the household, the minimum acceptable household size is (2 + 0 + 1) = 3. If the user inputs a number less than 3, an error message is generated and the user will have to input at least the minimum expected number.
+```
+# Example 6
+
+while True:
+    number_of_children_in_household = inputNumber("How many children under 18 years old reside in your household?\n[Please enter a number]: ")
+    if number_of_children_in_household < 0:
+        print('Invalid entry! Please try again.')
+    else:
+        if number_of_children_in_household == 1:
+            child_or_children = 'child'
+            is_or_are = 'is'
+        else:
+            child_or_children = 'children'
+            is_or_are = 'are'
+        print(f"You entered there {is_or_are} {number_of_children_in_household} {child_or_children} under 18 years old in your household.")
+        break
+
+while True:
+    if number_of_children_in_household == 0:
+        other_parent_in_household = "NaN"
+        break
+    other_parent_in_household = input(f"Does the other parent of your {child_or_children} reside in the household?\n[Enter yes or no]: ")
+    if other_parent_in_household in ["Yes", "YES", "y", "Y", "yes"]:
+        other_parent_in_household = 'y'
+        print("You entered the other parent DOES live in the household")
+        break
+    elif other_parent_in_household in ["No", "NO", "n", "no"]:
+        other_parent_in_household = 'n'
+        print("You entered the other parent DOES NOT live in the household")
+        break
+    else:
+        print("Invalid entry! Please try again.")
+        break
+
+while True:
+    minimum_expected_total_household_size = (number_of_children_in_household + (1 if other_parent_in_household == 'y' else 0) + 1)
+    total_household_size = inputNumber("Including yourself, how many total persons reside in your household?\n[Please enter a number]: ")
+    if total_household_size < 0:
+        print("Invalid entry! Please try again.")
+    elif total_household_size == 0:
+        print("Invalid entry! Total household size must be greater than or equal to 1.")
+    elif total_household_size < minimum_expected_total_household_size:
+        print(f"Invalid entry! You entered {total_household_size} which is less than your minimum total expected household size of {minimum_expected_total_household_size}.")
+    else:
+        print(f"Your entered your total_household_size is {total_household_size}.")
         break
 ```
