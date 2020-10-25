@@ -81,7 +81,7 @@ while True:
 ```
 ### Validating user's zipcode
 
-The user is required to enter the zipcode of residence. Although the zipcode will be an integer, the inputNumber function is not called within this while loop. Instead, the while loop is written to check two things: 1) whether the zipcode is 5 digits in length and 2) if the zipcode is a valid United States zipcode. The zipcode length is checked with if len(zipcode) != 5, thus, if the zipcode length is not exactly 5 digits, the user will be prompted until a valid zipcode is entered. A valid zipcode is determined by calling an `api_url` and will only be valid upon returning a response code of `200` which is accessed by the import requests above. The user will be greeted with the city, state and zipcode based on the user's input that is stored using `datastore`. The variables `input_city` and `input_state` are generated from the `json.loads(response.content)` that the `requests.get` returns as shown in Example 3.
+The user is required to enter the zipcode of residence. Although the zipcode will be an integer, the `inputNumber` function is not called within this while loop. Instead, the while loop is written to check two things: 1) whether the zipcode is 5 digits in length and 2) if the zipcode is a valid United States zipcode. The zipcode length is checked with if len(zipcode) != 5, thus, if the zipcode length is not exactly 5 digits, the user will be prompted until a valid zipcode is entered. A valid zipcode is determined by calling an `api_url` and will only be valid upon returning a response code of `200` which is accessed by the import requests above. The user will be greeted with the city, state and zipcode based on the user's input that is stored using `datastore`. The variables `input_city` and `input_state` are generated from the `json.loads(response.content)` that the `requests.get` returns as shown in Example 3.
 ```
 # Example 3
 
@@ -109,7 +109,7 @@ print(f"Great! You live in {input_city}, {input_state} and your zipcode is {zipc
 ```
 ### Coding to output proper is/are response
 
-When probing for number of chidren under 18 in the household, the code will accept any integer. However, the response to user will differ based on the number. If the user indicates the number of chidren is 1, the response to user will be 'You entered there IS 1 child. A response of any integer other than 1 will return the response of 'You entered there ARE n children'. In example 4, the user inputs the number of children. The code checks the input to determine: 1) if the input is valid then proceeds to check the number to determine whether you respond using 'child or children' to correspond with 'is or are'.
+When probing for number of chidren under 18 in the household, the code will accept any integer. However, the response to user will differ based on the number. If the user indicates the number of chidren is 1, the response to user will be 'You entered there `is` 1 child. A response of any integer other than 1 will return the response of 'You entered there `are` N children'. In example 4, the user inputs the number of children. The code checks the input to determine: 1) if the input is valid then proceeds to check the number to determine whether you respond using 'child or children' to correspond with 'is or are'.
 ```
 # Example 4
 
@@ -129,7 +129,7 @@ while True:
 ```
 ### Skipping a non-applicable question
 
-The follow-up question to number of children in the household asks whether the other parent resides in the household. Since some users will indicate 0 children in the household, it would be unnecessary to ask if the other parent resides in the household as that question would be non-applicable. Therefore, Example 5 shows how the code compares users' input to number of children in household. If number of children in household compares to 0, the other parent in household is marked as 'NaN' in the CSV and the question is skipped. Otherwise, if number of children is 1 or greater, user is then probed for other parent in household. The code is written to where a '0' input to number of children in the household will skip any further questions relating to children in the household.
+The follow-up question to number of children in the household asks whether the other parent resides in the household. Since some users will indicate 0 children in the household, it would be unnecessary to ask if the other parent resides in the household as that question would be non-applicable. Therefore, Example 5 shows how the code compares users' input to number of children in household. If number of children in household compares to 0, the other parent in household is marked as `NaN` in the CSV and the question is skipped. Otherwise, if number of children is 1 or greater, user is then probed for other parent in household. The code is written to where a '0' input to number of children in the household will skip any further questions relating to children in the household.
 ```
 # Example 5 
 
@@ -152,7 +152,7 @@ while True:
 ```
 ### Using a Tenary Operator
 
-In checking to ensure the user's total household number meets the minimum expected value (user + number of children + other parent if applicable), the numbers cannot be added using the current inputs. The number of children is a number, other parent in household is answered using a string 'yes' or 'no' and there is no count for the user. Thus, a number and a string cannot be added. Therefore, a tenary operator (value_if_true if condition else value_if_false) is used to convert the string 'yes' or 'no' answer to a number. This tenary operator is utilized in calculating the minimum expected value for total household size as (number_of_children_in_household + (1 if other_parent_in_household == 'y' else 0) + 1) where (1 if other_parent_in_household == 'y' else 0) translates as if the user answers yes to other_parent_in_household, then add 1, otherwise add 0. The + 1 at the end of the equation represents the user. Supposing the user indicates 2 children in the household and the other parent does not reside in the household, the minimum acceptable household size is (2 + 0 + 1) = 3. If the user inputs a number less than 3, an error message is generated and the user will have to input at least the minimum expected number.
+In checking to ensure the user's total household number meets the `minimum expected value` (user + number of children + other parent if applicable), the numbers cannot be added using the current inputs. The number of children is a number, other parent in household is answered using a string 'yes' or 'no' and there is no count for the user. Thus, a number and a string cannot be added. Therefore, a `tenary operator` (value_if_true if condition else value_if_false) is used to convert the string 'yes' or 'no' answer to a number. This tenary operator is utilized in calculating the minimum expected value for total household size as (number_of_children_in_household + (1 if other_parent_in_household == 'y' else 0) + 1) where (1 if other_parent_in_household == 'y' else 0) translates as if the user answers yes to other_parent_in_household, then add 1, otherwise add 0. The + 1 at the end of the equation represents the user. Supposing the user indicates 2 children in the household and the other parent does not reside in the household, the minimum acceptable household size is (2 + 0 + 1) = 3. If the user inputs a number less than 3, an error message is generated and the user will have to input at least the minimum expected number.
 ```
 # Example 6
 
@@ -203,7 +203,7 @@ while True:
 ## Writing to the CSV
 ### Naming the columns
 
-The name of the CSV file is defined at the top of the code as wowDataFinal = 'wowDataFinal.csv'. At the completion of the survey, the user's answers are then stored in variables as it appears in Example 7. the 's' represent a column in the CSV file that is created using the pd.Series.
+The name of the `CSV` file is defined at the top of the code as `wowDataFinal = wowDataFinal.csv`. At the completion of the survey, the user's answers are then stored in variables as it appears in Example 7. The `s` represents a column in the CSV file that is created using `pd.Series`.
 ```
 Example 7 
 
@@ -233,7 +233,7 @@ s['stopped_and_frisked'] = stopped_and_frisked
 ```
 ### Try/Except block to create the CSV file
 
-Example 8 shows a try/except block. Inside the 'try' loop, the code looks in the code folder for a file named 'wowDataFinal'. If the file is found, the code appends to that file using df = df.append. If the 'wowDataFinal' file is not found, the except block is activated which will create a CSV file. The code will then take the stored data, create a CSV file named 'wowDataFinal' and write to the file because the mode='w' instructs the code to write to stored data to the file.
+Example 8 shows a `try/except` block. Inside the `try` loop, the code looks in the code folder for a file named 'wowDataFinal'. If the file is found, the code appends to that file using `df = df.append`. If the 'wowDataFinal' file is not found, the `except` block is activated which will create a CSV file. The code will then take the stored data, create a CSV file named `wowDataFinal` and write to the file because the `mode='w'` instructs the code to write to stored data to the file.
 ```
 # Example 8
 
