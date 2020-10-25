@@ -252,21 +252,21 @@ df.to_csv(wowDataFinal, mode='w', index=False)
 Although there are numberous package managers and environment managers avaiable, [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/) is a platform that offers package and environment management dependencies in one platform. Installation instructions can be found [here](https://docs.anaconda.com/anaconda/install/). Once installation is complete, the command `jupyter notebook` can be run from the terminal to initialize and open Jupyter Notebook in the web browswer.
 
 df = pd.read_csv('wowDataFinal.csv', index_col=0)
-# This will bring the CSV file into jupyter notebook
+### This will bring the CSV file into jupyter notebook
 
 df
-# this will display the entire dataframe
+### this will display the entire dataframe
 
 df.head()
-# shows the first 5 rows
+### shows the first 5 rows
 
 df.tail()
-# shows the last 5 rows
+### shows the last 5 rows
 
 df.shape
-# shows the total number of rows, columns
-# each row represents the user's inputs
-# each column corresponds to a question in the survey
+### shows the total number of rows, columns
+### each row represents the user's inputs
+### each column corresponds to a question in the survey
 
 ## Plotting data with Seaborn
 import seaborn as sns
@@ -282,3 +282,17 @@ correlations = df.corr()
 sns.heatmap(correlations, cmap ='Blues')
 
 ### Running a linear model
+sns.lmplot(data = df, x = 'total_household_size', y = 'personal_income')
+
+### Running linear regression
+from statsmodels import regression
+import scipy as sp
+import numpy as np
+
+x = df [['personal_income', 'homeowner']]
+y = df
+
+### add a constant
+x['intercept'] = 1
+x.head()
+
