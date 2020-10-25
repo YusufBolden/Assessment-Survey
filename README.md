@@ -273,7 +273,7 @@ import seaborn as sns
 sns.pairplot(data = df, vars = ['age', 'gender', 'personal_income', 'incarceration'])
 ```
 
-![]{images/Seaborn_plot_age_gender_personal_income_incarceration.png}
+![](images/screenshot.png)
 
 ### Using a Matplotlib heatmap to analyze the data
 
