@@ -81,7 +81,7 @@ while True:
     else:
         print("Invalid entry! Please try again.")
 ```
-## Validating user's zipcode
+### Validating user's zipcode
 
 The user is required to enter the zipcode of residence. Although the zipcode will be an integer, the inputNumber function is not called within this while loop. Instead, the while loop is written to check two things: 1) whether the zipcode is 5 digits in length and 2) if the zipcode is a valid United States zipcode. The zipcode length is checked with if len(zipcode) != 5, thus, if the zipcode length is not exactly 5 digits, the user will be prompted until a valid zipcode is entered. A valid zipcode is determined by calling an api_url and will only be valid upon returning a response code of 200 which is accessed by the import requests above. The user will be greeted with the city, state and zipcode based on the user's input that is stored using datastore. The variables input_city and input_state are generated from the json.loads(response.content) that the requests.get returns as shown in Example 3.
 ```
