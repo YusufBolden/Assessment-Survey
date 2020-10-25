@@ -1,17 +1,14 @@
+# Author: Antwan Bolden
+# Date: April 16, 2020
+
 import pandas as pd
 import os
 import requests
 import json
 import sys
 
-wowDataFinal = 'wowDataFinal.csv'
-# print("Welcome to the Python WOW of Kevin Campfield and Yusuf Bolden. For this")
-# print("project we are taking a users' inputs to a survey and adding them to a dataframe")
-# print("that can be distributed by city and school officials at the beginning of each year")
-# print("to create a database with the information which can then be used to")
-# print("determine the residents and students who should be listed as priority")
-# print("recipients for emergency resources and the method by which")
-# print("resources would reach these residents in the fastest manner.\n")
+wowDataFinal = '/Data.wowDataFinal.csv'
+
 print("The following information is collected for statistical purposes and")
 print("will not be published, distributed or otherwise sold to any third party.\n")
 print("You must be a United States resident between the ages of 18-50 to complete")
@@ -344,3 +341,4 @@ df = df.append(s, ignore_index=True)
 df.to_csv(wowDataFinal, mode='w', index=False)
 
 print("The survey is now complete. Thank you for your participation!")
+print("For more information about this survey call toll-free (800) 555-5555")
