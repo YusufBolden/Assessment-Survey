@@ -23,8 +23,7 @@ The following libraries were imported:
 
 "import sys" - SYS is a library of system-specific parameters and functions.
 
-## Validating user inputs
-
+### Validating user inputs
 ### Checking Yes/No inputs
 
 After the intial question, which asks the user to input the user's name, each subsequent question is contolled by a while loop and within each while loop are if/else statements that contol the output (response to user). The first two (2) questions contain a while loop within the while loop that gives the user two (2) attemps to correctly answer the qualifying question. Should user fail to qualify on either question, the system will exit via sys.exit as shown below in Example 1. When a user's input is accepted, the While loop breaks and moves on to the next question.
