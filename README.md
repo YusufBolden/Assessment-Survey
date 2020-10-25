@@ -272,7 +272,8 @@ import seaborn as sns
 %matplotlib inline
 sns.pairplot(data = df, vars = ['age', 'gender', 'personal_income', 'incarceration'])
 ```
-![Seaborn plot showing correlation between age, personal income and incarceration](./image/img.jpg)
+![]{seaborn_plot_age_gender_income_incarceration.png}
+
 ### Using a Matplotlib heatmap to analyze the data
 
 correlations = df.corr()
