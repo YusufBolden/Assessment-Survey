@@ -278,9 +278,11 @@ sns.pairplot(data = df, vars = ['age', 'gender', 'personal_income', 'incarcerati
 correlations = df.corr()
 sns.heatmap(correlations, cmap ='Blues')
 (Note: color changes to heat map can be made by changing the color value of `cmap`)
+
 ![](images/matplotlib_heatmap.png)
 
 ### Running a linear model
 sns.lmplot(data = df, x = 'total_household_size', y = 'personal_income')
+
 ![](iamges/seaborn_lineal_model.png)
 
