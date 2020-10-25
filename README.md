@@ -29,9 +29,8 @@ The following libraries were imported:
 
 After the intial question, which asks the user to input the user's name, each subsequent question is contolled by a while loop and within each while loop are if/else statements that contol the output (response to user). The first two (2) questions contain a while loop within the while loop that gives the user two (2) attemps to correctly answer the qualifying question. Should user fail to qualify on either question, the system will exit via sys.exit as shown below in Example 1. When a user's input is accepted, the While loop breaks and moves on to the next question.
 
-### EXAMPLE 1
-
-### Question 2
+#### EXAMPLE 1
+#### Question 2
 ```
 while True:
     USResident = input("Are you a resident of the United States?\n[Please enter Yes or No]: ")
@@ -53,7 +52,7 @@ while True:
     else:
         print("Sorry! Invalid entry! Please try again")
  ```
-        
+
 ### Validating number inputs
 
 There are 5 questions which require the users to input numbers. To ensure the users' input is a valid number (not a negative number or containing letters, symbols or decimals), we have utlized the function displayed in Example 2. This function is written at the top of code file and given the name 'inputNumber' and it applies to any questions that call that function. The function inputNumber checks that the user inputs an integer. Any acceptable answer is received and the code will break to continue to the next question. Any input that is not an integer returns the error message. The code in Question 4 also returns an error message if the user's input age is not within the inclusice range 18-50.
