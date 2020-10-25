@@ -272,7 +272,7 @@ import seaborn as sns
 %matplotlib inline
 sns.pairplot(data = df, vars = ['age', 'gender', 'personal_income', 'incarceration'])
 ```
-![ScreenShot](Screenshot.jpg)
+![ScreenShot](/screenshots/latest.png)
 ### Using a Matplotlib heatmap to analyze the data
 
 correlations = df.corr()
