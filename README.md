@@ -23,7 +23,7 @@ The following libraries were imported:
 
 "import sys" - SYS is a library of system-specific parameters and functions.
 
-## Using code to validate user inputs
+## Validating user inputs
 
 ### Checking Yes/No inputs
 
@@ -78,4 +78,32 @@ while True:
         break
     else:
         print("Invalid entry! Please try again.")
+```
+## Validating user's zipcode
+
+The user is required to enter the zipcode of residence. Although the zipcode will be an integer, the inputNumber function is not called within this while loop. Instead, the while loop is written to check two things: 1) whether the zipcode is 5 digits in length and 2) if the zipcode is a valid United States zipcode. The zipcode length is checked with if len(zipcode) != 5, thus, if the zipcode length is not exactly 5 digits, the user will be prompted until a valid zipcode is entered. A valid zipcode is determined by calling an api_url and will only be valid upon returning a response code of 200 which is accessed by the import requests above. The user will be greeted with the city, state and zipcode based on the user's input that is stored using datastore. The variables input_city and input_state are generated from the json.loads(response.content) that the requests.get returns as shown in Example 3.
+```
+# Example 3
+
+API_KEY = "JlfALuS6idZcTt2Cn5Z3FkUEosJSRkpfNnMV58w6PD3T971F0jUPuw087c0orm37"
+
+while True:
+  zipcode = input("What is your zip code?\nPlease enter your 5-digit zip code: ")
+  if len(zipcode) != 5:
+      print('Invalid entry! Please try again.')
+      continue
+
+  api_url = "https://www.zipcodeapi.com/rest/" + API_KEY + "/info.json/" + zipcode + "/degrees"
+
+  response = requests.get(api_url)
+  if response.status_code == 200:
+    break
+  print("Invalid entry! Please try again.")
+
+datastore = json.loads(response.content)
+
+input_city = datastore['city']
+input_state = datastore['state']
+
+print(f"Great! You live in {input_city}, {input_state} and your zipcode is {zipcode}.")
 ```
