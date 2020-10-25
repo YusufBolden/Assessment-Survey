@@ -7,7 +7,7 @@ According to [usafacts.org](https://usafacts.org/articles/internet-access-studen
 
 ![According to usafacts.org, 4.4 million households with children don’t have consistent access to computers for online learning during the pandemic](https://usafactscms.azureedge.net/media/images/Tech_access_Wst00xE.width-1200.png "Percent of students in households with no internet or computer access by income")
 
-An example usage of this survey could have been implemented in school boards' decisions to close their entire school system in response to COVID-19. Many school distrcits made this decision and presumed every household within the district had access to the necessary resources to replicate the classromm in a mobile environment.
+An example usage of this survey could have been implemented in school boards' decisions to close their entire school system in response to COVID-19. Many school distrcits made this decision and presumed every household within the district had access to the necessary resources to replicate the classromm in a mobile environment. The information in the survey is for sample purposes only. None of the information represents any real persons.
 
 # Explanation of the code
 
@@ -266,32 +266,21 @@ Once the `Jupyter Notebook` setup is completed and the `wow_final.py file is ope
 ### Plotting data with Seaborn
 Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. (Instructions and technical details on how to use [Seaborn](https://seaborn.pydata.org/introduction.html))
 ```
-Example of how to plot and inspect for any correlation to age, personal income and incarceration (250 sample users):
+Example of how to plot and inspect for any correlation to age, personal income and incarceration:
 
 import seaborn as sns
 %matplotlib inline
 sns.pairplot(data = df, vars = ['age', 'gender', 'personal_income', 'incarceration'])
 ```
-
 ![](images/screenshot.png)
 
 ### Using a Matplotlib heatmap to analyze the data
 correlations = df.corr()
 sns.heatmap(correlations, cmap ='Blues')
+(Note: color changes to heat map can be made by changing the color value of `cmap`)
 ![](images/matplotlib_heatmap.png)
 
 ### Running a linear model
 sns.lmplot(data = df, x = 'total_household_size', y = 'personal_income')
-
-### Running linear regression
-from statsmodels import regression
-import scipy as sp
-import numpy as np
-
-x = df [['personal_income', 'homeowner']]
-y = df
-
-### add a constant
-x['intercept'] = 1
-x.head()
+![](iamges/seaborn_lineal_model.png)
 
