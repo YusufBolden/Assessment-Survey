@@ -341,4 +341,4 @@ df = df.append(s, ignore_index=True)
 df.to_csv(wowDataFinal, mode='w', index=False)
 
 print("The survey is now complete. Thank you for your participation!")
-print("For more information about this survey call toll-free (800) 555-5555")
+print("For more information about this survey call toll-free (800) 555-5555.")
