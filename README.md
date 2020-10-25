@@ -56,3 +56,23 @@ while True:
 ### Validating number inputs
 
 There are 5 questions which require the users to input numbers. To ensure the users' input is a valid number (not a negative number or containing letters, symbols or decimals), we have utlized the function displayed in Example 2. This function is written at the top of code file and given the name 'inputNumber' and it applies to any questions that call that function. The function inputNumber checks that the user inputs an integer. Any acceptable answer is received and the code will break to continue to the next question. Any input that is not an integer returns the error message. The code in Question 4 also returns an error message if the user's input age is not within the inclusice range 18-50.
+
+### EXAMPLE 2
+def inputNumber(message):
+    while True:
+        try:
+            userInput = int(input(message))
+            break
+        except ValueError :
+            print("Invalid entry! Please try again.")
+
+    return userInput
+
+### Question 4
+while True:
+    age = inputNumber("Please enter your age: [Age must be a number between 18 and 50]\nPlease enter your age: ")
+    if age >= 18 and age <= 50:
+        print(f"Great! Your entered your age as {age}, which qualifies for this survey.")
+        break
+    else:
+        print("Invalid entry! Please try again.")
