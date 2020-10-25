@@ -249,19 +249,21 @@ df.to_csv(wowDataFinal, mode='w', index=False)
 ## Data Analysis
 ### Reading the data
 
-Although there are numberous package managers and environment managers avaiable, [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/) is a platform that offers package and environment management dependencies in one platform. Installation instructions can be found [here](https://docs.anaconda.com/anaconda/install/). Once installation is complete, the command `jupyter notebook` can be run from the terminal to initialize and open Jupyter Notebook in the web browswer. Instructions on how to run Python in `Jupyter Notebook` are given [here](https://docs.anaconda.com/anaconda/user-guide/getting-started/#run-python-in-a-jupyter-notebook)
+Although there are numberous package managers and environment managers avaiable, [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/) is a platform that offers package and environment management dependencies in one platform. Installation instructions can be found [here](https://docs.anaconda.com/anaconda/install/). Once installation is complete, the command `jupyter notebook` can be run from the terminal to initialize and open Jupyter Notebook in the web browswer. Instructions on how to run and/or import Python into `Jupyter Notebook` are given [here](https://docs.anaconda.com/anaconda/user-guide/getting-started/#run-python-in-a-jupyter-notebook).
+
+Once the `Jupyter Notebook` setup is completed, the data collected and stored in the CSV can be analyzed.
 
 ### Typing this command in the will bring the CSV file into jupyter notebook
 `df = pd.read_csv('wowDataFinal.csv', index_col=0),
 
+### This will display the entire dataframe
 df
-### this will display the entire dataframe
 
+### This shows the first 5 rows of the dataframe
 df.head()
-### shows the first 5 rows
-
+### This shows the last 5 rows of the dataframe.
 df.tail()
-### shows the last 5 rows
+
 
 df.shape
 ### shows the total number of rows, columns
