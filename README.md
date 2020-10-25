@@ -107,3 +107,46 @@ input_state = datastore['state']
 
 print(f"Great! You live in {input_city}, {input_state} and your zipcode is {zipcode}.")
 ```
+### Coding to output proper is/are response
+
+When probing for number of chidren under 18 in the household, the code will accept any integer. However, the response to user will differ based on the number. If the user indicates the number of chidren is 1, the response to user will be 'You entered there IS 1 child. A response of any integer other than 1 will return the response of 'You entered there ARE n children'. In example 4, the user inputs the number of children. The code checks the input to determine: 1) if the input is valid then proceeds to check the number to determine whether you respond using 'child or children' to correspond with 'is or are'.
+```
+# Example 4
+
+while True:
+    number_of_children_in_household = inputNumber("How many children under 18 years old reside in your household?\n[Please enter a number]: ")
+    if number_of_children_in_household < 0:
+        print('Invalid entry! Please try again.')
+    else:
+        if number_of_children_in_household == 1:
+            child_or_children = 'child'
+            is_or_are = 'is'
+        else:
+            child_or_children = 'children'
+            is_or_are = 'are'
+        print(f"You entered there {is_or_are} {number_of_children_in_household} {child_or_children} under 18 years old in your household.")
+        break
+```
+### Skipping a non-applicable question
+
+The follow-up question to number of children in the household asks whether the other parent resides in the household. Since some users will indicate 0 children in the household, it would be unnecessary to ask if the other parent resides in the household as that question would be non-applicable. Therefore, Example 5 shows how the code compares users' input to number of children in household. If number of children in household compares to 0, the other parent in household is marked as 'NaN' in the CSV and the question is skipped. Otherwise, if number of children is 1 or greater, user is then probed for other parent in household. The code is written to where a '0' input to number of children in the household will skip any further questions relating to children in the household.
+```
+# Example 5 
+
+while True:
+    if number_of_children_in_household == 0:
+        other_parent_in_household = "NaN"
+        break
+    other_parent_in_household = input(f"Does the other parent of your {child_or_children} reside in the household?\n[Enter yes or no]: ")
+    if other_parent_in_household in ["Yes", "YES", "y", "Y", "yes"]:
+        other_parent_in_household = 'y'
+        print("You entered the other parent DOES live in the household")
+        break
+    elif other_parent_in_household in ["No", "NO", "n", "no"]:
+        other_parent_in_household = 'n'
+        print("You entered the other parent DOES NOT live in the household")
+        break
+    else:
+        print("Invalid entry! Please try again.")
+        break
+```
