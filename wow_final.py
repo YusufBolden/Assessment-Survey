@@ -3,6 +3,7 @@ import os
 import requests
 import json
 import sys
+
 wowDataFinal = 'wowDataFinal.csv'
 # print("Welcome to the Python WOW of Kevin Campfield and Yusuf Bolden. For this")
 # print("project we are taking a users' inputs to a survey and adding them to a dataframe")
