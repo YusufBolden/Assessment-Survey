@@ -248,5 +248,5 @@ df.to_csv(wowDataFinal, mode='w', index=False)
 ```
 ## Data Analysis
 ### Reading the data
-
-While there are numberous package and environment managers avaiable, [https://docs.anaconda.com/anaconda/navigator/] Anaconda Navigator
+)
+While there are numberous package and environment managers avaiable, [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/)
