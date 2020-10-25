@@ -277,7 +277,7 @@ sns.pairplot(data = df, vars = ['age', 'gender', 'personal_income', 'incarcerati
 ### Using a Matplotlib heatmap to analyze the data
 correlations = df.corr()
 sns.heatmap(correlations, cmap ='Blues')
-(Note: color changes to heat map can be made by changing the color value of `cmap`)
+Note: color changes to heat map can be made by changing the color value of `cmap`
 
 ![Heatmap](images/matplotlib_heatmap.png)
 
