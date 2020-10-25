@@ -9,7 +9,7 @@ According to [usafacts.org](https://usafacts.org/articles/internet-access-studen
 
 An example usage of this survey could have been implemented in school boards' decisions to close their entire school system in response to COVID-19. Many school distrcits made this decision and presumed every household within the district had access to the necessary resources to replicate the classromm in a mobile environment.
 
-## Explanation of the code
+# Explanation of the code
 
 The following libraries were imported:
 
