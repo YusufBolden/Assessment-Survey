@@ -13,20 +13,20 @@ An example usage of this survey could have been implemented in school boards' de
 
 The following libraries were imported:
 
-"import pandas as pd" - used import the vast toolkit that provides numerous tools for data analysis such as data structure and operations for manipulating numerical tables and times series. Pandas is abbreviated as pd as a matter of ease in typing.
+`import pandas as pd` - used import the vast toolkit that provides numerous tools for data analysis such as data structure and operations for manipulating numerical tables and times series. Pandas is abbreviated as pd as a matter of ease in typing.
 
-"import os" - used to import the miscellaneous operating system interfaces from the os library
+`import os` - used to import the miscellaneous operating system interfaces from the os library
 
-"import requests" - allows HTTP requests to be made.
+`import requests` - allows HTTP requests to be made.
 
-"import json" - JSON is used to covert the python dictionary into a json string that can be written to a file
+`import json` - JSON is used to covert the python dictionary into a json string that can be written to a file
 
-"import sys" - SYS is a library of system-specific parameters and functions.
+`import sys` - SYS is a library of system-specific parameters and functions.
 
 # Validating user inputs
 ### Checking Yes/No inputs
 
-After the intial question, which asks the user to input the user's name, each subsequent question is contolled by a while loop and within each while loop are if/else statements that contol the output (response to user). The first two (2) questions contain a while loop within the while loop that gives the user two (2) attemps to correctly answer the qualifying question. Should user fail to qualify on either question, the system will exit via sys.exit as shown below in Example 1. When a user's input is accepted, the While loop breaks and moves on to the next question.
+After the intial question, which asks the user to input the user's name, each subsequent question is contolled by a while loop and within each while loop are if/else statements that contol the output (response to user). The first two (2) questions contain a while loop within the while loop that gives the user two (2) attemps to correctly answer the qualifying question. Should user fail to qualify on either question, the system will exit via `sys.exit` as shown below in Example 1. When a user's input is accepted, the While loop breaks and moves on to the next question.
 ```
 EXAMPLE 1
 
@@ -55,7 +55,7 @@ while True:
 
 ### Validating number inputs
 
-There are 5 questions which require the users to input numbers. To ensure the users' input is a valid number (not a negative number or containing letters, symbols or decimals), we have utlized the function displayed in Example 2. This function is written at the top of code file and given the name 'inputNumber' and it applies to any questions that call that function. The function inputNumber checks that the user inputs an integer. Any acceptable answer is received and the code will break to continue to the next question. Any input that is not an integer returns the error message. The code in Question 4 also returns an error message if the user's input age is not within the inclusice range 18-50.
+There are 5 questions which require the users to input numbers. To ensure the users' input is a valid number (not a negative number or containing letters, symbols or decimals), we have utlized the function displayed in Example 2. This function is written at the top of code file and given the name 'inputNumber' and it applies to any questions that call that function. The function `inputNumber` checks that the user inputs an integer. Any acceptable answer is received and the code will break to continue to the next question. Any input that is not an integer returns the error message. The code in Question 4 also returns an error message if the user's input age is not within the inclusive range 18-50.
 ```
 EXAMPLE 2
 
@@ -81,7 +81,7 @@ while True:
 ```
 ### Validating user's zipcode
 
-The user is required to enter the zipcode of residence. Although the zipcode will be an integer, the inputNumber function is not called within this while loop. Instead, the while loop is written to check two things: 1) whether the zipcode is 5 digits in length and 2) if the zipcode is a valid United States zipcode. The zipcode length is checked with if len(zipcode) != 5, thus, if the zipcode length is not exactly 5 digits, the user will be prompted until a valid zipcode is entered. A valid zipcode is determined by calling an api_url and will only be valid upon returning a response code of 200 which is accessed by the import requests above. The user will be greeted with the city, state and zipcode based on the user's input that is stored using datastore. The variables input_city and input_state are generated from the json.loads(response.content) that the requests.get returns as shown in Example 3.
+The user is required to enter the zipcode of residence. Although the zipcode will be an integer, the inputNumber function is not called within this while loop. Instead, the while loop is written to check two things: 1) whether the zipcode is 5 digits in length and 2) if the zipcode is a valid United States zipcode. The zipcode length is checked with if len(zipcode) != 5, thus, if the zipcode length is not exactly 5 digits, the user will be prompted until a valid zipcode is entered. A valid zipcode is determined by calling an `api_url` and will only be valid upon returning a response code of `200` which is accessed by the import requests above. The user will be greeted with the city, state and zipcode based on the user's input that is stored using `datastore`. The variables `input_city` and `input_state` are generated from the `json.loads(response.content)` that the `requests.get` returns as shown in Example 3.
 ```
 # Example 3
 
