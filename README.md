@@ -223,7 +223,7 @@ while True:
 ## Writing to the CSV
 ### Naming the columns
 
-The name of the `CSV` file is defined at the top of the code as `wowDataFinal = wowDataFinal.csv`. At the completion of the survey, the user's answers are then stored in variables as it appears in Example 7. The `s` represents a column in the CSV file that is created using `pd.Series`.
+The name of the `CSV` file is defined at the top of the code as `pySurvey = pySurvey.csv`. At the completion of the survey, the user's answers are then stored in variables as it appears in Example 7. The `s` represents a column in the CSV file that is created using `pd.Series`.
 ```
 Example 7 
 
@@ -253,27 +253,27 @@ s['stopped_and_frisked'] = stopped_and_frisked
 ```
 ### Try/Except block to create the CSV file
 
-Example 8 shows a `try/except` block. Inside the `try` loop, the code looks in the code folder for a file named 'wowDataFinal'. If the file is found, the code appends to that file using `df = df.append`. If the 'wowDataFinal' file is not found, the `except` block is activated which will create a CSV file. The code will then take the stored data, create a CSV file named `wowDataFinal` and write to the file because the `mode='w'` instructs the code to write to stored data to the file.
+Example 8 shows a `try/except` block. Inside the `try` loop, the code looks in the code folder for a file named 'wowDataFinal'. If the file is found, the code appends to that file using `df = df.append`. If the 'wowDataFinal' file is not found, the `except` block is activated which will create a CSV file. The code will then take the stored data, create a CSV file named `pySurvey` and write to the file because the `mode='w'` instructs the code to write to stored data to the file.
 ```
 # Example 8
 
 try:
-    df = pd.read_csv(wowDataFinal)
+    df = pd.read_csv(pySurvey)
 except:
     df = pd.DataFrame()
 
 df = df.append(s, ignore_index=True)
 
-df.to_csv(wowDataFinal, mode='w', index=False)
+df.to_csv(pySurvey, mode='w', index=False)
 ```
 ## Data Analysis
 ### Reading the data
 
 Although there are numberous package managers and environment managers avaiable, [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/) is a platform that offers package and environment management dependencies in one platform. Installation instructions can be found [here](https://docs.anaconda.com/anaconda/install/). Once installation is complete, the command `jupyter notebook` can be run from the terminal to initialize and open Jupyter Notebook in the web browswer. Instructions on how to run and/or import Python into `Jupyter Notebook` are given [here](https://docs.anaconda.com/anaconda/user-guide/getting-started/#run-python-in-a-jupyter-notebook).
 
-Once the `Jupyter Notebook` setup is completed and the `wow_final.py file is opened`, the data collected and stored in the `CSV` can be analyzed using the following process:
+Once the `Jupyter Notebook` setup is completed and the `pySurvery` file is opened, the data collected and stored in the `CSV` can be analyzed using the following process:
 
-1. Typing `df = pd.read_csv('wowDataFinal.csv', index_col=0)` will make the `CSV` file accessible in the jupyter notebook.
+1. Typing `df = pd.read_csv('pySurvey.csv', index_col=0)` will make the `CSV` file accessible in the jupyter notebook.
 
 2. Entering `df` in the next field will display the entire dataframe.
 
