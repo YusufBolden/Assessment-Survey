@@ -99,6 +99,9 @@ api_file.close()
 while True:
 
   zipcode = input("What is your zip code?\nPlease enter your zip code: ")
+    if len(zipcode) != 5:
+        print("Invalid entry! Please try again.")
+        continue
 
   api_url = "https://www.zipcodeapi.com/rest/" + API_KEY + "/info.json/" + zipcode + "/degrees"
 
