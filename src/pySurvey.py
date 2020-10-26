@@ -17,7 +17,7 @@ def inputNumber(message):
         else:
             return userInput
 
-wowDataFinal = '../data/pySurvey.csv'
+pySurvey = '../data/pySurvey.csv'
 
 print("The following information is collected for statistical purposes and")
 print("will not be published, distributed or otherwise sold to any third party.\n")
@@ -135,7 +135,9 @@ print(f"Great! You live in {input_city}, {input_state} and your zipcode is {zipc
 
 while True:
     number_of_children_in_household = inputNumber("How many children under 18 years' old reside in your household?\n[Please enter a number]: ")
-    if number_of_children_in_household == 0:
+    if number_of_children_in_household < 0:
+        print("Invalid entry! Please try again.")
+    elif number_of_children_in_household == 0:
         other_parent_in_household = 0
         print(f"You entered there are {number_of_children_in_household} children under 18 years' old in your household.")
         break
@@ -203,7 +205,7 @@ while True:
     else:
         print("Invalid entry! Please try again.")
 while True:
-    personal_income = int(input("What is your personal income?\n[Please enter whole number than identifes your current income without using any commas, spaces or decimal]: "))
+    personal_income = inputNumber("What is your personal income?\n[Please enter whole number than identifes your current income without using any commas, spaces or decimal]: ")
     def is_digit(personal_income):
         if personal_income.isdigit():
             print(f"You entered your personal income as {personal_income}")
