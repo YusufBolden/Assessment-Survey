@@ -7,8 +7,7 @@ According to [usafacts.org](https://usafacts.org/articles/internet-access-studen
 
 ![According to usafacts.org, 4.4 million households with children don’t have consistent access to computers for online learning during the pandemic](https://usafactscms.azureedge.net/media/images/Tech_access_Wst00xE.width-1200.png "Percent of students in households with no internet or computer access by income")
 
-An example usage of this survey could have been implemented in school boards' decisions to close their entire school systems in response to COVID-19. Many school distrcits made this decision and presumed every household within the district had access to the necessary resources to replicate the classromm in a mobile environment. 
-[Note: The information in the survey is completely random and for sample purposes only. None of the information represents any real persons.]
+An example usage of this survey could have been implemented in school boards' decisions to close their entire school systems in response to COVID-19. Many school distrcits made this decision and presumed every household within the district had access to the necessary resources to replicate the classromm in a mobile environment.<br>[Note: The information in the survey is completely random and for sample purposes only. None of the information represents any real persons.]
 
 # Explanation of the code
 
@@ -290,7 +289,7 @@ Once the `Jupyter Notebook` setup is completed and the `pySurvery` file is opene
 6. To find the total number of rows and columns, enter `df.shape`. The returned values will display the rows, columns in that order where each row represents the user's inputs and each column corresponds to a question in the survey.
 
 ### Plotting data with Seaborn
-Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. (Instructions and technical details on how to use [Seaborn](https://seaborn.pydata.org/introduction.html))
+Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics.<br>(Instructions and technical details on how to use [Seaborn](https://seaborn.pydata.org/introduction.html))
 ```
 Example of how to plot and inspect for any correlation to age, personal income and incarceration:
 
@@ -302,8 +301,7 @@ sns.pairplot(data = df, vars = ['age', 'gender', 'personal_income', 'incarcerati
 
 ### Using a Matplotlib heatmap to analyze the data
 correlations = df.corr()
-sns.heatmap(correlations, cmap ='Blues')
-Note: color changes to heat map can be made by changing the color value of `cmap`
+sns.heatmap(correlations, cmap ='Blues')<br>[Note: color changes to heat map can be made by changing the color value of `cmap`]
 
 ![Heatmap](images/matplotlib_heatmap.png)
 
