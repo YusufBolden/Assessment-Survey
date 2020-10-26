@@ -253,7 +253,7 @@ s['stopped_and_frisked'] = stopped_and_frisked
 ```
 ### Try/Except block to create the CSV file
 
-Example 8 shows a `try/except` block. Inside the `try` loop, the code looks in the code folder for a file named `pySurvey`. If the file is found, the code appends to that file using `df = df.append`. If the `pySurvey` file is not found, the `except` block is activated which will create a CSV file. The code will then take the stored data, create a CSV file named `pySurvey` and write to the file because the `mode='w'` instructs the code to write to stored data to the file.
+Example 8 shows a `try/except` block. Inside the `try` loop, the code looks in the code folder for a file named `pySurvey`. If the file is found, the code appends to that file using `df = df.append`. If the `pySurvey` file is not found, the `except` block is activated which will create a CSV file named `pySurvey.csv`. The code will then take the stored data, create a CSV file named `pySurvey` and write to the file because the `mode='w'` instructs the code to write to stored data to the file.
 ```
 # Example 8
 
