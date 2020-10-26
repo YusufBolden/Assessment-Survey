@@ -94,7 +94,7 @@ with open(api_file_path) as api_file:
     API_KEY = api_file.read()
 
 # close file
-api_file.close(00)
+api_file.close()
 
 while True:
 
