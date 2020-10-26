@@ -120,7 +120,7 @@ while True:
     if len(zipcode) != 5:
         print("Invalid entry! Please try again.")
         continue
-    
+
     api_url = "https://www.zipcodeapi.com/rest/" + API_KEY + "/info.json/" + zipcode + "/degrees"
 
     response = requests.get(api_url)

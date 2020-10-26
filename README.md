@@ -87,7 +87,7 @@ The user is required to enter the zipcode of residence. Although the zipcode wil
 # Example 3
 
 # path to file with API key stored in it
-api_file_path = "../zipcode_api_key.txt"
+api_file_path = "./zipcode_api_key.txt"
 
 # read api key from file into API_KEY variable
 with open(api_file_path) as api_file:
