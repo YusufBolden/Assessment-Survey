@@ -26,7 +26,7 @@ The following libraries were imported:
 # Validating user inputs
 ### Validating number inputs
 
-There are 5 questions which require the users to input numbers. To ensure the users' input is a valid number (not a negative number or containing letters, symbols or decimals), we have utlized the function displayed in Example 1. This function is written at the top of code file and given the name 'inputNumber' and it applies to any questions that call that function. The function `inputNumber` checks that the user inputs an integer. Any acceptable answer is received and the code will break to continue to the next question. Any input that is not an integer returns the error message. The code in Question 4 also returns an error message if the user's input age is not within the inclusive range 18-50.
+There are 5 questions which require the users to input numbers. To ensure the users' input is a valid number (not a negative number or containing letters, symbols or decimals), the function displayed in Example 1 is utilized. This function is written at the top of code file and given the name `inputNumber` and it applies to any questions that call that function. The function `inputNumber` checks that the user inputs an integer. Any acceptable answer is received and the code will break the while loop to continue to the next question. Any input that is not an integer returns the error message. The code in Question 4 also returns an error message if the user's input age is not within the inclusive range 18-50.
 ```
 EXAMPLE 1
 
@@ -273,15 +273,17 @@ Although there are numberous package managers and environment managers avaiable,
 
 Once the `Jupyter Notebook` setup is completed and the `pySurvery` file is opened, the data collected and stored in the `CSV` can be analyzed using the following process:
 
-1. Typing `df = pd.read_csv('pySurvey.csv', index_col=0)` will make the `CSV` file accessible in the jupyter notebook.
+1. Import the code into `jupyter notebook` by typing `from src import pySurvey` into the empty field and then clicking `run`.
 
-2. Entering `df` in the next field will display the entire dataframe.
+2. Typing `df = pd.read_csv('pySurvey.csv', index_col=0)` will make the `CSV` file accessible in the jupyter notebook.
 
-3. To view a portion of the code from the top, `df.head()` can be run. The default value will display the first 5 rows. To view a specific number, enter `df.head(N)` where N represents the number of desired rows to view.
+3. Entering `df` in the next field will display the entire dataframe.
 
-4. Viewing portions of the code from the bottom follows the same pattern as viewing the code from the top. Entering `df.tail()` will return the last 5 items in the CSV.
+4. To view a portion of the code from the top, `df.head()` can be run. The default value will display the first 5 rows. To view a specific number, enter `df.head(N)` where N represents the number of desired rows to view.
 
-5. To find the total number of rows and columns, enter `df.shape`. The returned values will display the rows, columns in that order where each row represents the user's inputs and each column corresponds to a question in the survey.
+5. Viewing portions of the code from the bottom follows the same pattern as viewing the code from the top. Entering `df.tail()` will return the last 5 items in the CSV.
+
+6. To find the total number of rows and columns, enter `df.shape`. The returned values will display the rows, columns in that order where each row represents the user's inputs and each column corresponds to a question in the survey.
 
 ### Plotting data with Seaborn
 Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. (Instructions and technical details on how to use [Seaborn](https://seaborn.pydata.org/introduction.html))
