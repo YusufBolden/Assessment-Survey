@@ -7,7 +7,8 @@ According to [usafacts.org](https://usafacts.org/articles/internet-access-studen
 
 ![According to usafacts.org, 4.4 million households with children don’t have consistent access to computers for online learning during the pandemic](https://usafactscms.azureedge.net/media/images/Tech_access_Wst00xE.width-1200.png "Percent of students in households with no internet or computer access by income")
 
-An example usage of this survey could have been implemented in school boards' decisions to close their entire school systems in response to COVID-19. Many school distrcits made this decision and presumed every household within the district had access to the necessary resources to replicate the classromm in a mobile environment. The information in the survey is for sample purposes only. None of the information represents any real persons.
+An example usage of this survey could have been implemented in school boards' decisions to close their entire school systems in response to COVID-19. Many school distrcits made this decision and presumed every household within the district had access to the necessary resources to replicate the classromm in a mobile environment. 
+[Note: The information in the survey is completely random and for sample purposes only. None of the information represents any real persons.]
 
 # Explanation of the code
 
@@ -278,7 +279,7 @@ Once the `Jupyter Notebook` setup is completed and the `pySurvery` file is opene
 
 1. Import the code into `jupyter notebook` by typing `from src import pySurvey` into the empty field and then clicking `run`.
 
-2. Typing `df = pd.read_csv('pySurvey.csv', index_col=0)` will make the `CSV` file accessible in the jupyter notebook.
+2. Typing `df = pd.read_csv('../data/pySurvey.csv', index_col=0)` will make the `CSV` file accessible in the jupyter notebook.
 
 3. Entering `df` in the next field will display the entire dataframe.
 
