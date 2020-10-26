@@ -7,7 +7,17 @@ import requests
 import json
 import sys
 
-wowDataFinal = '/Data.wowDataFinal.csv'
+def inputNumber(message):
+    while True:
+        try:
+            userInput = int(input(message))
+        except ValueError :
+            print("Invalid entry! Please try again.")
+            continue
+        else:
+            return userInput
+
+wowDataFinal = '../data/pySurvey.csv'
 
 print("The following information is collected for statistical purposes and")
 print("will not be published, distributed or otherwise sold to any third party.\n")
@@ -78,22 +88,13 @@ while True:
     else:
         print("Invalid entry! Please try again.")
 
-def inputNumber(message):
-    while True:
-        try:
-            userInput = int(input(message))
-        except ValueError :
-            print("Invalid entry! Please try again.")
-            continue
-        else:
-            return userInput
-            break
-
-age = inputNumber("Please enter your age: [Age must be between 18 and 50]\nPlease enter your age: ")
-if age >= 18 and age <= 50:
-    print(f"Great! Your age is {age}, which is within the correct range.")
-else:
-    print("Invalid entry! Please try again.")
+while True:
+    age = inputNumber("Please enter your age: [Age must be between 18 and 50]\nPlease enter your age: ")
+    if age >= 18 and age <= 50:
+        print(f"Great! Your age is {age}, which is within the correct range.")
+        break
+    else:
+        print("Invalid entry! Please try again.")
 
 while True:
     race = input("Which of the following best describes your race or ethnicity?\n[Please enter White, Black, Hispanic, Asian, Native American, Mixed or Other]: ")
@@ -104,7 +105,15 @@ while True:
     else:
         print("Invalid entry! Please try again.")
 
-API_KEY = "JlfALuS6idZcTt2Cn5Z3FkUEosJSRkpfNnMV58w6PD3T971F0jUPuw087c0orm37"
+# path to file with API key stored in it
+api_file_path = "../zipcode_api_key.txt"
+
+# read api key from file into API_KEY variable
+with open(api_file_path) as api_file:
+    API_KEY = api_file.read()
+
+# close file
+api_file.close()
 
 while True:
 
@@ -125,7 +134,7 @@ input_state = datastore['state']
 print(f"Great! You live in {input_city}, {input_state} and your zipcode is {zipcode}.")
 
 while True:
-    number_of_children_in_household = int(input("How many children under 18 years' old reside in your household?\n[Please enter a number]: "))
+    number_of_children_in_household = inputNumber("How many children under 18 years' old reside in your household?\n[Please enter a number]: ")
     if number_of_children_in_household == 0:
         other_parent_in_household = 0
         print(f"You entered there are {number_of_children_in_household} children under 18 years' old in your household.")
@@ -152,17 +161,24 @@ while True:
         break
 
 while True:
-    total_household_size = int(input("Including yourself, how many total persons reside in your household?\n[Please enter a number]: "))
-    if total_household_size == 0:
+    minimum_expected_total_household_size = (number_of_children_in_household + (1 if other_parent_in_household == 'y' else 0) + 1)
+    total_household_size = inputNumber("Including yourself, how many total persons reside in your household?\n[Please enter a number]: ")
+    if total_household_size >= minimum_expected_total_household_size:
+        print(f"Great! You entered your total household size is {total_household_size}.")
+        break
+    elif total_household_size < 0:
+        print("Invalid entry! Please try again")
+    elif total_household_size == 0:
         print("Invalid entry! Total household size must be greater than or equal to 1.")
+    elif total_household_size < minimum_expected_total_household_size:
+        print(f"Invalid entry! You entered your total household size is {total_household_size} which is less that your minimum total expected household size of {minimum_expected_total_household_size}")
     elif total_household_size >= 1:
         print(f"Your entered your total_household_size is {total_household_size}.")
-        break
     else:
         print("Invalid entry! Please try again.")
 
 while True:
-    high_school_or_higher = input("Did you receive your high school diploma or high school equivalency such as a GED?\n[Please enter yes or no]: ")
+    high_school_or_higher = input("Did you receive your high school diploma or high school equivalency such as a GED? [Please enter yes or no]: ")
     if high_school_or_higher in ["Yes", "YES", "y", "Y", "yes"]:
         high_school_or_higher = 'y'
         print("Great! You are a high school graduate.")
@@ -198,7 +214,7 @@ while True:
 
 
 while True:
-    homeowner = input("Do you own your home?\n[Please enter yes or no]: ")
+    homeowner = input("Do you own your home? [Please enter yes or no]: ")
     if homeowner in ["Yes", "YES", "y", "Y", "yes"]:
         homeowner = 'y'
         print("You entered that you own your home.")
@@ -253,7 +269,7 @@ while True:
     if number_of_children_in_household == 0:
         child_incarceration = 0
         break
-    child_incarceration = input("Have any of your children ever been arrested or incarcerated in a City, County, State or Federal jail or prison?[Enter 0 if you do not have children]\n[Please enter yes, no or 0]: ")
+    child_incarceration = input("Have any of your children ever been arrested or incarcerated in a City, County, State or Federal jail or prison?\n[Please enter yes or no]: ")
     if child_incarceration in ["Yes", "YES", "y", "Y", "yes"]:
         child_incarceration = 'y'
         print("You entered YES you have at least one child who has been incarcerated.")
@@ -282,7 +298,7 @@ while True:
     if number_of_children_in_household == 0:
         child_victim_of_crime = 0
         break
-    child_victim_of_crime = input("Have any of your children ever been the victim of a crime?[Enter 0 if you do not have children]\n[Please enter yes, no or 0]: ")
+    child_victim_of_crime = input("Have any of your children ever been the victim of a crime?\n[Please enter yes or no]: ")
     if child_victim_of_crime in ["Yes", "YES", "y", "Y", "yes"]:
         child_victim_of_crime = 'y'
         print("You entered YES you have at least one child who has been the victim of a crime.")
@@ -332,13 +348,13 @@ s['child_victim_of_crime'] = child_victim_of_crime
 s['stopped_and_frisked'] = stopped_and_frisked
 
 try:
-    df = pd.read_csv(wowDataFinal)
+    df = pd.read_csv(pySurvey)
 except:
     df = pd.DataFrame()
 
 df = df.append(s, ignore_index=True)
 
-df.to_csv(wowDataFinal, mode='w', index=False)
+df.to_csv(pySurvey, mode='w', index=False)
 
 print("The survey is now complete. Thank you for your participation!")
 print("For more information about this survey call toll-free (800) 555-5555.")

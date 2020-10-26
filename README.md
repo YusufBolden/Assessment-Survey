@@ -81,17 +81,23 @@ while True:
 ```
 ### Validating user's zipcode
 
-The user is required to enter the zipcode of residence. Although the zipcode will be an integer, the `inputNumber` function is not called within this while loop. Instead, the while loop is written to check two things: 1) whether the zipcode is 5 digits in length and 2) if the zipcode is a valid United States zipcode. The zipcode length is checked with if len(zipcode) != 5, thus, if the zipcode length is not exactly 5 digits, the user will be prompted until a valid zipcode is entered. A valid zipcode is determined by calling an `api_url` and will only be valid upon returning a response code of `200` which is accessed by the import requests above. The user will be greeted with the city, state and zipcode based on the user's input that is stored using `datastore`. The variables `input_city` and `input_state` are generated from the `json.loads(response.content)` that the `requests.get` returns as shown in Example 3.
+The user is required to enter the zipcode of residence. Although the zipcode will be an integer, the `inputNumber` function is not called within this while loop. Instead, the while loop is written to check two things: 1) whether the zipcode is 5 digits in length and 2) if the zipcode is a valid United States zipcode. The zipcode length is checked with if len(zipcode) != 5, thus, if the zipcode length is not exactly 5 digits, the user will be prompted until a valid zipcode is entered. A valid zipcode is determined by making an API call using the `API KEY` on the `api_url` and will only be valid upon returning a response code of `200` which is accessed by the import requests above. The user will be greeted with the city, state and zipcode based on the user's input that is stored using `datastore`. The variables `input_city` and `input_state` are generated from the `json.loads(response.content)` that the `requests.get` returns as shown in Example 3.
 ```
 # Example 3
 
-API_KEY = "JlfALuS6idZcTt2Cn5Z3FkUEosJSRkpfNnMV58w6PD3T971F0jUPuw087c0orm37"
+# path to file with API key stored in it
+api_file_path = "../zipcode_api_key.txt"
+
+# read api key from file into API_KEY variable
+with open(api_file_path) as api_file:
+    API_KEY = api_file.read()
+
+# close file
+api_file.close()
 
 while True:
-  zipcode = input("What is your zip code?\nPlease enter your 5-digit zip code: ")
-  if len(zipcode) != 5:
-      print('Invalid entry! Please try again.')
-      continue
+
+  zipcode = input("What is your zip code?\nPlease enter your zip code: ")
 
   api_url = "https://www.zipcodeapi.com/rest/" + API_KEY + "/info.json/" + zipcode + "/degrees"
 
@@ -114,9 +120,11 @@ When probing for number of chidren under 18 in the household, the code will acce
 # Example 4
 
 while True:
-    number_of_children_in_household = inputNumber("How many children under 18 years old reside in your household?\n[Please enter a number]: ")
-    if number_of_children_in_household < 0:
-        print('Invalid entry! Please try again.')
+    number_of_children_in_household = inputNumber("How many children under 18 years' old reside in your household?\n[Please enter a number]: ")
+    if number_of_children_in_household == 0:
+        other_parent_in_household = 0
+        print(f"You entered there are {number_of_children_in_household} children under 18 years' old in your household.")
+        break
     else:
         if number_of_children_in_household == 1:
             child_or_children = 'child'
@@ -124,18 +132,29 @@ while True:
         else:
             child_or_children = 'children'
             is_or_are = 'are'
-        print(f"You entered there {is_or_are} {number_of_children_in_household} {child_or_children} under 18 years old in your household.")
+        print(f"You entered there {is_or_are} {number_of_children_in_household} {child_or_children} under 18 years' old in your household.")
+        other_parent_in_household = input(f"Does the other parent of your {child_or_children} reside in the household?\n[Enter yes or no]: ")
+        if other_parent_in_household in ["Yes", "YES", "y", "Y", "yes"]:
+            other_parent_in_household = 'y'
+            print("You entered the other parent DOES live in the household")
+            break
+        elif other_parent_in_household in ["No", "NO", "n", "no"]:
+            other_parent_in_household = 'n'
+            print("You entered the other parent DOES NOT live in the household")
+            break
+        else:
+            print("Invalid entry! Please try again.")
         break
 ```
 ### Skipping a non-applicable question
 
-The follow-up question to number of children in the household asks whether the other parent resides in the household. Since some users will indicate 0 children in the household, it would be unnecessary to ask if the other parent resides in the household as that question would be non-applicable. Therefore, Example 5 shows how the code compares users' input to number of children in household. If number of children in household compares to 0, the other parent in household is marked as `NaN` in the CSV and the question is skipped. Otherwise, if number of children is 1 or greater, user is then probed for other parent in household. The code is written to where a '0' input to number of children in the household will skip any further questions relating to children in the household.
+The follow-up question to number of children in the household asks whether the other parent resides in the household. Since some users will indicate 0 children in the household, it would be unnecessary to ask if the other parent resides in the household as that question would be non-applicable. Therefore, Example 5 shows how the code compares users' input to number of children in household. If number of children in household compares to 0, the other parent in household is marked as 0 in the CSV and the question is skipped. Otherwise, if number of children is 1 or greater, user is then probed for other parent in household. The code is written to where a '0' input to number of children in the household will skip any further questions relating to children in the household.
 ```
 # Example 5 
 
 while True:
     if number_of_children_in_household == 0:
-        other_parent_in_household = "NaN"
+        other_parent_in_household = 0
         break
     other_parent_in_household = input(f"Does the other parent of your {child_or_children} reside in the household?\n[Enter yes or no]: ")
     if other_parent_in_household in ["Yes", "YES", "y", "Y", "yes"]:
@@ -172,7 +191,7 @@ while True:
 
 while True:
     if number_of_children_in_household == 0:
-        other_parent_in_household = "NaN"
+        other_parent_in_household = 0
         break
     other_parent_in_household = input(f"Does the other parent of your {child_or_children} reside in the household?\n[Enter yes or no]: ")
     if other_parent_in_household in ["Yes", "YES", "y", "Y", "yes"]:
