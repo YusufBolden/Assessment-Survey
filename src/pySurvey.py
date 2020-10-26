@@ -116,15 +116,17 @@ with open(api_file_path) as api_file:
 api_file.close()
 
 while True:
+    zipcode = input("What is your zip code?\nPlease enter your zip code: ")
+    if len(zipcode) != 5:
+        print("Invalid entry! Please try again.")
+        continue
+    
+    api_url = "https://www.zipcodeapi.com/rest/" + API_KEY + "/info.json/" + zipcode + "/degrees"
 
-  zipcode = input("What is your zip code?\nPlease enter your zip code: ")
-
-  api_url = "https://www.zipcodeapi.com/rest/" + API_KEY + "/info.json/" + zipcode + "/degrees"
-
-  response = requests.get(api_url)
-  if response.status_code == 200:
-    break
-  print("Invalid entry! Please try again.")
+    response = requests.get(api_url)
+    if response.status_code == 200:
+        break
+    print("Invalid entry! Please try again.")
 
 datastore = json.loads(response.content)
 
