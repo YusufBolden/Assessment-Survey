@@ -207,12 +207,12 @@ while True:
     else:
         print("Invalid entry! Please try again.")
 while True:
-    personal_income = inputNumber("What is your personal income?\n[Please enter whole number than identifes your current income without using any commas, spaces or decimal]: ")
+    personal_income = inputNumber("What is your annual personal income?\n[Please enter whole number than identifes your current annual income without using any commas, spaces or decimal]: ")
     def is_digit(personal_income):
         if personal_income.isdigit():
             print(f"You entered your personal income as {personal_income}")
         else:
-            print("Invalid entry! Please enter a whole number that represents your current personal income.")
+            print("Invalid entry! Please enter a whole number that represents your current annual personal income.")
     print(f"You entered your current income is ${personal_income}.")
     break
 
