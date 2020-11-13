@@ -1,34 +1,253 @@
 first_name,gender,age,race,city,state,zipcode,number_of_children_in_household,other_parent_in_household,total_household_size,high_school_or_higher,employed,personal_income,homeowner,transportation,home_internet_access,incarceration,child_incarceration,victim_of_crime,child_victim_of_crime,stopped_and_frisked
-steve,male,28,white,Queens,NY,11101,1,no,2,y,y,20001-35000,n,private,y,n,n,y,yes,no
-karen,female,36,white,Brooklyn,NY,11216,3,yes,5,y,y,35001-50000,y,public,y,n,y,y,yes,no
-brian,male,24,black,Bronx,NY,10456,2,yes,4,n,n,less_than_15000,n,public,y,y,n,n,no,yes
-michael,other,19,black,Staten Island,NY,10314,0,no,1,y,n,less_than_15000,n,public,y,y,n,y,no,yes
-larry,male,30,black,Queens,NY,11355,0,no,1,y,y,15000-20000,n,public,y,y,n,n,no,yes
-tamika,other,22,mixed,Bronx,NY,10460,0,no,1,y,y,less_than_15000,n,public,y,y,n,n,yes,yes
-sharon,female,21,black,Brooklyn,NY,11236,1,no,1,y,y,less_than_15000,n,public,y,n,n,n,yes,yes
-kimberly,female,29,black,Manhattan,NY,10028,5,no,6,y,y,15000-20000,n,public,y,n,n,y,yes,no
-tawanda,female,26,mixed,Manhattan,NY,10013,2,no,3,y,y,15000-20000,n,public,y,n,n,n,yes,no
-aminah,female,25,black,Queens,NY,11415,0,no,1,y,y,less_than_15000,n,public,y,y,n,n,yes,yes
-david,male,25,black,Queens,NY,11419,0,no,1,y,y,more_than_50000,y,private,y,n,n,y,yes,yes
-carol,female,42,mixed,Brooklyn,NY,11204,4,yes,6,y,y,20001-35000,n,private,y,n,y,y,yes,yes
-muhammad,male,24,mixed,Bronx,NY,10461,2,yes,4,y,y,20001-35000,n,public,y,n,n,n,yes,no
-keith,male,23,black,Bronx,NY,11218,2,no,3,y,y,less_than_15000,n,public,y,n,n,n,yes,yes
-andrea,female,27,hispanic,Queens,NY,11692,3,no,4,y,n,less_than_15000,n,private,y,n,n,n,no,yes
-zalika,female,18,mixed,Brooklyn,NY,11225,1,no,2,n,n,less_than_15000,n,public,y,n,n,n,no,no
-hannah,female,44,hispanic,Queens,NY,11373,2,no,3,y,y,20001-35000,n,public,y,y,y,y,yes,yes
-armando,male,35,hispanic,Manhattan,NY,10003,2,yes,4,y,y,less_than_15000,n,public,y,n,y,y,yes,no
-luisa,female,24,asian,Manhattan,NY,10027,0,no,1,y,y,less_than_15000,n,private,y,n,n,y,yes,yes
-aida,female,23,hispanic,Bronx,NY,10454,0,no,1,y,n,less_than_15000,n,public,y,n,n,n,no,yes
-ciara,female,29,black,Bronx,NY,10452,3,no,4,y,y,20001-35000,n,public,y,n,n,n,yes,yes
-griselda,female,48,hispanic,Brooklyn,NY,11220,3,yes,5,n,n,less_than_15000,n,public,n,n,y,n,no,no
-diana,female,46,mixed,Staten Island,NY,10306,3,no,4,y,y,35001-50000,n,public,y,n,y,n,yes,no
-javier,male,28,hispanic,Queens,NY,11104,1,no,2,y,y,less_than_15000,n,private,y,y,n,n,yes,yes
-julia,female,36,mixed,Keeling,VA,24566,1,yes,3,y,y,3,y,private,y,n,n,n,n,n
-lisa,female,34,asian,Elgin,IL,60123,1,no,2,yes,yes,5,yes,1,yes,no,no,yes,no,no
-michael,male,43,white,Norwood,CO,81423,0,0,2,y,y,4,y,1,y,n,0,y,0,n
-kimberly,female,33,black,Dry Prong,LA,71423,3,n,5,n,n,2,n,0,y,y,y,y,y,n
-keith,male,33,black,Bland,VA,24315,2,y,4,y,y,4,y,1,y,n,n,y,n,n
-mary,female,48,white,Barstow,CA,92312,3,y,5,y,n,1,y,1,y,n,n,y,y,n
-Jerry,male,33,native american,Holland,KY,42153,2,n,3,y,n,3,y,1,y,n,n,y,n,n
+Steve,m,28,white,Queens,NY,11101,1,n,2,y,y,24750,n,private,y,n,n,y,y,n
+Karen,f,36,white,Brooklyn,NY,11216,3,y,5,y,y,42500,y,public,y,n,y,y,y,n
+brian,m,24,black,Bronx,NY,10456,2,y,4,n,n,12000,n,public,y,y,n,n,n,y
+michael,o,19,black,Staten Island,NY,10314,0,,1,y,n,13500,n,public,y,y,,y,,y
+larry,m,30,black,Queens,NY,11355,0,,3,y,y,17650,n,public,y,y,,n,,y
+tamika,o,22,mixed,Bronx,NY,10460,0,,1,y,y,10000,n,public,y,y,,n,,y
+sharon,f,21,black,Brooklyn,NY,11236,1,n,2,y,y,13250,n,public,y,n,n,n,y,y
+kimberly,f,29,black,Manhattan,NY,10028,5,n,6,y,y,19500,n,public,y,n,n,y,y,n
+tawanda,f,26,mixed,Manhattan,NY,10013,2,n,3,y,y,16500,n,public,y,n,n,n,y,n
+aminah,f,25,black,Queens,NY,11415,0,,1,y,y,11750,n,public,y,y,,n,,y
+david,m,25,black,Queens,NY,11419,0,,1,y,y,65000,y,private,y,n,,y,,y
+carol,f,42,mixed,Brooklyn,NY,11204,4,y,6,y,y,30000,n,private,y,n,y,y,y,y
+muhammad,m,24,mixed,Bronx,NY,10461,2,y,4,y,y,35000,n,public,y,n,n,n,y,n
+keith,m,23,black,Bronx,NY,11218,2,n,3,y,y,12000,n,public,y,n,n,n,y,y
+andrea,f,27,hispanic,Queens,NY,11692,3,n,4,y,n,13500,n,private,y,n,n,n,n,y
+zalika,f,18,mixed,Brooklyn,NY,11225,1,n,2,n,n,12000,n,public,y,n,n,n,n,n
+hannah,f,44,hispanic,Queens,NY,11373,2,n,3,y,y,27000,n,public,y,y,y,y,y,y
+armando,m,35,hispanic,Manhattan,NY,10003,2,y,4,y,y,13000,n,public,y,n,y,y,y,n
+luisa,f,24,asian,Manhattan,NY,10027,0,,1,y,y,12000,n,private,y,n,,y,,y
+aida,f,23,hispanic,Bronx,NY,10454,0,,1,y,n,11800,n,public,y,n,,n,,y
+ciara,f,29,black,Bronx,NY,10452,3,n,4,y,y,35000,n,public,y,n,n,n,y,y
+griselda,f,48,hispanic,Brooklyn,NY,11220,3,y,5,n,n,11000,n,public,n,n,y,n,n,n
+diana,f,46,mixed,Staten Island,NY,10306,3,n,4,y,y,45000,n,public,y,n,y,n,y,n
+javier,m,28,hispanic,Queens,NY,11104,1,n,2,y,y,11000,n,private,y,y,n,n,y,y
+julia,f,36,mixed,Keeling,VA,24566,1,y,3,y,y,32000,y,private,y,n,n,n,n,n
+lisa,f,34,asian,Elgin,IL,60123,1,n,2,y,y,51275,y,private,y,n,n,y,n,n
+michael,m,43,white,Norwood,CO,81423,0,,2,y,y,38000,y,private,y,n,,y,,y
+kimberly,f,33,black,Dry Prong,LA,71423,20,y,22,n,n,185000,n,private,y,n,y,y,y,n
+keith,m,33,black,Bland,VA,24315,2,y,4,y,y,42000,y,private,y,n,n,y,n,n
+mary,f,48,white,Barstow,CA,92312,3,y,5,y,n,8000,y,private,y,n,n,y,y,n
+Jerry,m,33,native american,Holland,KY,42153,2,n,3,y,n,24000,y,private,y,n,n,y,n,n
 Keith,m,34,black,Baltimore,MD,21239,2,y,4,y,y,37500,y,private,y,y,y,y,y,y
-Paul,m,34,white,Schenectady,NY,12345,0,0,1,y,y,12000,y,private,y,y,0,y,0,y
+Zach,m,23,white,Long Island City,NY,11101,0,,1,y,y,35000,n,public,y,y,,n,,n
+Kamala,f,45,asian,Anchorage,AK,99523,2,y,4,y,y,35000,y,private,y,n,y,n,n,n
+Zaynab,f,37,black,Hamden,CT,6514,2,n,3,y,n,0,n,public,y,y,y,y,y,y
+Terrell,m,34,black,Raleigh,NC,27609,3,y,5,y,y,32650,n,private,y,y,y,y,n,n
+Cassidy,o,23,hispanic,Reno,NV,89501,0,,2,y,y,23000,n,private,y,n,,n,,y
+Tracy,m,36,white,Beaver,WV,25813,3,n,4,y,y,25000,y,private,y,n,y,y,n,y
+Zach,m,48,white,Brooklyn,NY,11216,5,y,7,y,y,15000,n,public,y,n,y,y,y,n
+Kelly,f,37,mixed,Washington,DC,20019,2,y,4,n,n,12000,n,public,y,y,y,y,n,n
+Kevin,o,49,other,Manchester Township,NJ,8759,0,,1,y,n,100000,y,public,n,y,,y,,n
+Jesus,m,32,hispanic,Bell,CA,90201,0,,1,y,y,35000,n,private,n,n,,y,,n
+John,m,44,white,Tidioute,PA,16351,0,,1,y,y,0,n,public,n,n,,y,,y
+Robert,m,28,white,Tiona,PA,16352,1,n,1,y,y,32650,n,public,n,n,y,y,n,n
+Michael,m,36,white,Tionesta,PA,16353,5,n,6,y,y,23000,n,private,y,y,y,y,n,n
+Mary,f,24,black,Titusville,PA,16354,2,n,3,y,y,25000,n,public,n,y,n,y,n,n
+William,o,19,black,Townville,PA,16360,0,,1,y,y,15000,n,public,n,n,,y,,y
+David,m,30,black,Tylersburg,PA,16361,0,,1,y,y,12000,n,public,n,n,,y,,n
+Joseph,m,22,mixed,Utica,PA,16362,4,y,6,y,y,10000,n,private,n,n,y,y,n,n
+Richard,m,21,black,Howardsville,VA,24562,2,y,4,y,y,10000,n,public,n,y,y,y,y,y
+Charles,m,29,black,Hurt,VA,24563,2,n,3,y,y,13250,n,public,n,y,y,y,y,n
+Thomas,m,26,mixed,Java,VA,24565,3,n,4,y,n,19500,n,public,y,n,n,y,n,y
+Christopher,m,25,black,Keeling,VA,24566,1,n,2,n,n,16500,,private,n,n,y,y,n,n
+Daniel,m,25,black,Long Island,VA,24569,0,,2,y,y,11750,n,private,n,n,,y,,n
+Elizabeth,f,42,mixed,Lowry,VA,24570,3,y,5,y,y,42500,y,public,y,n,y,y,y,n
+Matthew,m,24,mixed,Lynch Station,VA,24571,2,y,4,n,n,12000,n,public,y,y,y,n,y,n
+Patricia,f,23,black,Madison Heights,VA,24572,0,,1,y,n,13500,n,public,n,n,,y,,y
+George,m,27,hispanic,Montcalm,WV,24737,0,,1,y,y,17650,n,public,n,n,,n,,y
+Jennifer,f,18,mixed,Nemours,WV,24738,0,,3,y,y,10000,n,public,n,n,,n,,y
+Linda,f,44,hispanic,Princeton,WV,24740,1,n,1,y,y,13250,n,public,y,y,n,n,y,y
+Anthony,m,35,hispanic,Rock,WV,24747,5,n,6,y,y,19500,n,public,y,n,n,y,y,n
+Barbara,f,24,asian,Welch,WV,24801,2,n,3,y,y,16500,n,public,n,n,n,n,y,n
+Donald,m,23,hispanic,Anawalt,WV,24808,0,,2,y,y,11750,n,public,y,y,,n,,y
+Paul,m,29,black,Avondale,WV,24811,0,,1,y,y,65000,y,private,y,n,,y,,y
+Mark,o,48,hispanic,Bartley,WV,24813,4,y,6,y,y,30000,n,private,n,y,y,y,y,y
+Andrew,m,46,mixed,Berwind,WV,24815,2,y,4,y,y,35000,n,public,n,n,n,n,y,n
+Edward,m,28,hispanic,Big Sandy,WV,24816,2,n,3,y,y,12000,n,public,n,n,n,n,y,y
+Steven,m,36,mixed,Stoneville,NC,27048,3,n,4,y,n,13500,n,private,y,n,n,n,n,y
+Kenneth,m,34,asian,Tobaccoville,NC,27050,1,n,2,n,n,12000,n,public,y,n,n,n,n,n
+Margaret,f,43,white,Walkertown,NC,27051,2,n,3,y,y,27000,n,public,,,y,y,y,y
+Joshua,m,33,black,Walnut Cove,NC,27052,2,y,4,y,y,7500,n,public,y,n,y,y,y,n
+Kalvin,m,33,black,Westfield,NC,27053,0,,1,y,y,8200,n,private,y,n,,y,,y
+Brian,m,48,white,Woodleaf,NC,27054,0,,1,y,n,10350,n,public,y,n,,n,,y
+Jessica,f,33,native american,Yadkinville,NC,27055,3,n,4,y,y,22850,n,public,y,n,n,n,y,y
+Jason,m,34,black,Winston Salem,NC,27101,3,y,5,n,n,13000,n,public,n,n,y,n,n,n
+Helen,f,23,white,Winston Salem,NC,27103,3,n,4,y,y,48500,n,public,y,n,y,n,y,n
+Nancy,f,45,asian,Winston Salem,NC,27104,1,n,2,y,y,10000,n,private,y,y,n,n,y,y
+Betty,f,37,black,Lugoff,SC,29078,1,y,3,y,y,32000,y,private,y,n,n,n,n,n
+Karen,f,34,black,Lydia,SC,29079,1,n,2,y,y,51275,y,private,y,n,n,y,n,n
+Jeffrey,m,23,hispanic,Lynchburg,SC,29080,0,,2,y,y,38000,y,private,y,n,,y,,y
+Lisa,f,36,white,Ehrhardt,SC,29081,3,n,5,n,n,14000,n,public,y,y,y,y,y,n
+Ryan,m,48,white,Lodge,SC,29082,2,y,4,y,y,42000,y,private,y,n,n,y,n,n
+Jacob,m,37,mixed,Mc Bee,SC,29101,3,y,5,y,n,8000,y,private,y,n,n,y,y,n
+Frank,m,49,other,Manning,SC,29102,2,n,3,y,n,24000,y,private,y,n,n,y,n,n
+Gary,m,34,black,Mayesville,SC,29104,2,y,4,y,y,37500,y,private,y,y,y,y,y,y
+Nicholas,m,23,hispanic,Monetta,SC,29105,0,,1,y,y,150000,n,public,y,n,,n,,y
+Anna,f,36,white,Neeses,SC,29107,2,y,4,y,y,35000,y,private,y,n,n,y,n,n
+Eric,m,48,white,Bostwick,GA,30623,2,n,3,y,n,0,n,public,y,y,y,y,y,y
+Sandra,f,37,mixed,Bowman,GA,30624,3,y,5,y,y,32650,n,private,y,y,n,y,n,y
+Stephen,m,49,other,Buckhead,GA,30625,0,,2,y,y,23000,n,private,y,n,,n,,y
+Emily,f,32,hispanic,Carlton,GA,30627,3,n,4,y,y,25000,y,private,y,n,n,y,y,n
+Ashley,f,23,black,Colbert,GA,30628,5,y,7,y,y,15000,n,public,y,n,n,y,n,y
+Jonathan,m,27,hispanic,Comer,GA,30629,2,n,3,y,n,12000,n,public,y,y,n,y,y,y
+Kimberly,f,18,mixed,Crawford,GA,30630,7,y,20,y,n,100000,y,public,n,y,n,y,n,y
+Donna,o,44,hispanic,Crawfordville,GA,30631,0,,2,y,n,8000,y,private,n,y,,y,,n
+Ruth,f,35,hispanic,Danielsville,GA,30633,3,n,5,n,y,24000,n,public,n,y,y,n,n,y
+Carol,f,24,asian,Cullman,AL,35058,2,y,4,y,y,37500,y,private,n,n,y,y,n,y
+Michelle,f,23,hispanic,Docena,AL,35060,3,y,5,y,n,150000,y,private,n,n,n,y,y,n
+Larry,m,29,black,Dolomite,AL,35061,2,n,3,y,n,27000,y,private,y,y,y,y,n,n
+Laura,f,48,hispanic,Dora,AL,35062,2,y,4,y,n,14000,y,private,y,y,n,y,n,n
+Amanda,f,46,mixed,Empire,AL,35063,0,,1,y,y,12000,n,public,y,y,,y,,n
+Justin,m,28,hispanic,Fairfield,AL,35064,2,y,4,y,y,35000,y,private,n,n,y,y,y,y
+Raymond,m,36,mixed,Fultondale,AL,35068,2,n,3,y,n,12000,n,public,n,y,y,y,n,n
+Scott,m,34,asian,Garden City,AL,35070,3,y,5,y,y,13500,n,private,n,n,n,y,n,n
+Samuel,m,43,white,Gardendale,AL,35071,0,,2,y,y,12000,n,private,n,y,,y,,n
+Brandon,m,33,black,Goodwater,AL,35072,3,n,4,y,y,27000,n,public,n,y,y,y,y,y
+Melissa,f,33,black,Graysville,AL,35073,5,y,7,y,n,6000,n,public,n,n,n,y,n,n
+Benjamin,m,48,white,Green Pond,AL,35074,2,n,3,y,n,9000,n,public,y,n,n,y,n,n
+Rebecca,f,33,native american,Hanceville,AL,35077,2,y,5,y,y,17650,n,public,y,y,y,y,y,y
+Deborah,f,34,black,Harpersville,AL,35078,0,,1,y,y,10000,n,public,y,y,,y,,n
+Stephanie,f,23,white,Hermitage,TN,37076,1,n,1,y,y,13250,n,public,y,n,n,y,n,y
+Sharon,f,45,asian,Hurricane Mills,TN,37078,5,n,6,y,y,19500,n,public,y,y,n,y,n,n
+Kathleen,f,37,black,Indian Mound,TN,37079,2,n,3,y,y,16500,n,public,y,n,n,y,n,n
+Cynthia,f,34,black,Joelton,TN,37080,0,,4,y,y,11750,n,public,y,y,,y,,n
+Gregory,m,23,hispanic,Kingston Springs,TN,37082,0,,1,y,y,65000,y,private,n,y,,n,,n
+Jack,m,36,white,Lafayette,TN,37083,4,y,6,y,y,30000,n,private,y,n,n,y,y,y
+Amy,f,48,white,Lascassas,TN,37085,2,y,4,y,y,35000,n,public,y,y,y,n,y,n
+Henry,m,37,mixed,La Vergne,TN,37086,2,n,3,y,y,12000,n,public,y,n,y,n,y,y
+Shirley,f,49,other,Lebanon,TN,37087,3,n,4,y,n,13500,n,private,y,n,n,n,n,y
+Patrick,m,32,hispanic,Lebanon,TN,37090,1,n,2,n,n,12000,n,public,y,n,n,n,n,n
+Alexander,m,44,white,Lewisburg,TN,37091,2,n,3,y,y,27000,n,public,y,y,y,y,y,y
+Emma,f,28,white,Liberty,TN,37095,2,y,4,y,y,9000,n,public,y,n,y,y,y,n
+Angela,f,36,white,Linden,TN,37096,0,,1,y,y,11000,n,private,y,n,,y,,y
+Catherine,f,24,black,Lobelville,TN,37097,0,,1,y,n,12000,n,public,y,n,,n,,y
+Virginia,f,19,black,Lyles,TN,37098,3,n,4,y,y,25000,n,public,y,n,n,n,y,y
+Katherine,f,30,black,Cairo,GA,39827,3,y,5,n,n,12000,n,public,n,n,y,n,n,n
+Walter,m,22,mixed,Cairo,GA,39828,3,n,4,y,y,40000,n,public,y,n,y,n,y,n
+Dennis,m,21,black,Climax,GA,39834,1,n,2,y,y,12000,n,private,y,y,n,n,y,y
+Jerry,m,29,black,Coleman,GA,39836,1,y,3,y,y,32000,y,private,y,n,n,n,n,n
+Brenda,f,26,mixed,Colquitt,GA,39837,1,n,2,y,y,51275,y,private,y,n,n,y,n,n
+Pamela,f,25,black,Cuthbert,GA,39840,0,,2,y,y,38000,y,private,y,n,,y,,y
+Frances,f,25,black,Damascus,GA,39841,3,n,5,n,n,14000,n,public,y,y,y,y,y,n
+Tyler,m,42,mixed,Dawson,GA,39842,2,y,4,y,y,42000,y,private,y,n,n,y,n,n
+Nicole,f,24,mixed,Donalsonville,GA,39845,3,y,5,y,n,8000,y,private,y,n,n,y,y,n
+Christine,o,23,black,Edison,GA,39846,2,n,3,y,n,24000,y,private,y,n,n,y,n,n
+Aaron,m,27,hispanic,Fort Gaines,GA,39851,2,y,4,y,y,37500,y,private,y,y,y,y,y,y
+Peter,m,18,mixed,Georgetown,GA,39854,0,,1,y,y,150000,n,public,y,n,,n,,n
+Samantha,f,44,hispanic,Iron City,GA,39859,2,y,4,y,y,35000,y,private,y,n,n,y,n,n
+Evelyn,f,35,hispanic,Jakin,GA,39861,2,n,3,y,n,0,n,public,y,y,y,y,y,y
+Jose,m,24,asian,Corbin,KY,40701,3,y,5,y,y,32650,n,private,y,y,n,y,n,y
+Rachel,f,23,hispanic,East Bernstadt,KY,40729,0,,2,y,y,23000,n,private,y,n,,y,,y
+Alice,f,29,black,Gray,KY,40734,3,n,4,y,y,25000,y,public,y,n,y,y,y,n
+Douglas,f,48,hispanic,Keavy,KY,40737,5,y,7,y,y,15000,n,private,y,n,n,y,y,y
+Janet,f,46,mixed,Lily,KY,40740,2,n,3,y,n,12000,n,public,y,n,n,n,n,y
+Carolyn,f,28,hispanic,London,KY,40741,1,y,3,y,n,100000,y,public,y,n,n,n,y,y
+Adam,o,36,mixed,London,KY,40743,3,n,4,y,y,37500,y,private,y,n,y,y,n,y
+Debra,f,34,asian,London,KY,40744,1,n,2,n,y,12000,n,public,y,y,y,y,y,n
+Harold,o,43,white,Rockholds,KY,40759,2,n,3,y,y,12000,y,private,y,n,n,y,n,n
+Nathan,f,33,black,Siler,KY,40763,2,y,4,y,y,100000,y,private,y,n,n,y,y,n
+Martha,f,33,black,Williamsburg,KY,40769,0,,3,y,y,27000,y,private,y,n,,y,,n
+Maria,f,48,white,Woodbine,KY,40771,0,,1,y,y,14000,y,private,y,y,,y,,y
+Marie,f,33,native american,Ages Brookside,KY,40801,3,n,4,y,n,6500,n,public,y,n,y,n,n,n
+Zachary,m,23,hispanic,Baxter,KY,40806,3,y,5,n,y,37500,y,private,y,n,n,y,n,n
+Arthur,m,29,black,Benham,KY,40807,3,n,4,y,y,11200,n,public,y,y,y,y,y,y
+Heather,f,48,hispanic,Big Laurel,KY,40808,1,n,2,y,y,32000,n,private,y,y,n,y,n,y
+Diane,f,46,mixed,Youngstown,OH,44503,1,y,3,y,y,51275,n,private,y,n,n,y,y,y
+Julie,f,28,hispanic,Youngstown,OH,44504,1,n,2,y,y,38000,y,public,y,n,y,y,y,n
+Joyce,f,36,mixed,Youngstown,OH,44505,0,,2,y,n,14000,n,public,y,n,,y,,n
+Carl,m,34,asian,Youngstown,OH,44506,3,n,5,n,y,42000,n,public,y,n,n,n,y,n
+Grace,f,43,white,Youngstown,OH,44507,2,y,4,y,y,36650,n,public,y,y,n,n,y,y
+Victoria,f,33,black,Youngstown,OH,44509,0,,1,y,y,12000,y,private,y,n,,y,,y
+Albert,m,33,black,Youngstown,OH,44510,3,n,4,y,y,12000,n,private,y,n,y,y,y,y
+Rose,f,48,white,Youngstown,OH,44511,3,y,5,n,y,13500,n,public,y,n,n,n,y,n
+Joan,f,33,native american,Youngstown,OH,44512,3,n,4,y,y,12000,n,public,y,n,n,n,y,y
+Kyle,f,34,black,Youngstown,OH,44514,1,n,2,y,n,27000,n,private,y,n,n,n,n,y
+Christina,m,23,hispanic,Youngstown,OH,44515,1,y,3,y,n,12000,n,public,y,n,n,n,n,n
+Kelly,f,45,mixed,Alliance,OH,44601,1,n,2,y,n,14000,n,public,y,y,y,y,y,y
+Ann,f,37,hispanic,Apple Creek,OH,44606,0,,2,y,n,13000,n,public,y,n,,y,,n
+Lauren,f,18,hispanic,Augusta,OH,44607,4,n,5,n,y,48500,n,private,y,n,n,y,y,y
+Doris,o,44,asian,Beach City,OH,44608,1,n,2,y,y,24750,n,public,y,n,n,n,n,y
+Julia,f,35,hispanic,Beloit,OH,44609,3,y,5,y,n,42500,n,public,y,n,n,n,y,y
+Jean,f,24,black,Cloverdale,IN,46120,2,y,4,n,n,12000,n,public,n,n,y,n,n,n
+Lawrence,m,23,hispanic,Coatesville,IN,46121,0,,4,y,n,13500,n,public,y,n,,n,,n
+Judith,f,29,mixed,Danville,IN,46122,0,,1,y,y,17650,n,public,y,y,,n,,y
+Olivia,f,48,hispanic,Avon,IN,46123,0,,2,y,y,10000,n,public,y,y,,n,,y
+Kathryn,f,46,mixed,Edinburgh,IN,46124,1,n,1,y,y,13250,n,public,y,n,n,n,y,y
+Joe,m,28,asian,Eminence,IN,46125,5,n,6,y,y,19500,n,public,y,n,n,y,y,n
+Mildred,f,36,white,Fairland,IN,46126,2,n,3,y,y,16500,n,public,y,n,n,n,y,n
+Willie,m,34,hispanic,Falmouth,IN,46127,0,,2,y,y,11750,n,public,y,y,,n,,y
+Gerald,m,35,hispanic,Fillmore,IN,46128,0,,1,y,y,65000,y,private,y,n,,y,,y
+Lillian,f,24,asian,Fountaintown,IN,46130,4,y,6,y,y,30000,n,private,y,n,y,y,y,y
+Roger,m,23,hispanic,Franklin,IN,46131,2,y,4,y,y,35000,n,public,y,n,n,n,y,n
+Cheryl,o,29,black,Glenwood,IN,46133,2,n,3,y,y,12000,n,public,y,n,n,n,y,y
+Megan,f,48,hispanic,Greencastle,IN,46135,3,n,4,y,n,13500,n,private,y,n,n,n,n,y
+Jeremy,m,46,mixed,Greenfield,IN,46140,1,n,2,n,n,12000,n,public,y,n,n,n,n,n
+Keith,m,28,hispanic,Greenwood,IN,46142,2,n,3,y,y,27000,n,public,y,y,y,y,y,y
+Hannah,f,36,mixed,Greenwood,IN,46143,2,y,4,y,y,12000,n,public,y,n,y,y,y,n
+Andrea,f,34,asian,Gwynneville,IN,46144,0,,1,y,y,0,n,private,y,n,,y,,y
+Ethan,m,43,white,Homer,IN,46146,0,,1,y,n,6800,n,public,y,n,,n,,y
+Sara,f,33,black,Jamestown,IN,46147,3,n,4,y,y,28000,n,public,y,n,n,n,y,y
+Terry,f,33,black,Warren,MI,48089,3,y,5,n,n,10000,n,public,n,n,y,n,n,n
+Jacqueline,f,48,white,Warren,MI,48091,3,n,4,y,y,47500,n,public,y,n,y,n,y,n
+Christian,f,33,native american,Warren,MI,48092,1,n,2,y,y,10000,n,private,y,y,n,n,y,y
+Harry,m,34,black,Warren,MI,48093,1,y,3,y,y,32000,y,private,y,n,n,n,n,n
+Jesse,m,23,white,Washington,MI,48094,1,n,2,y,y,51275,y,private,y,n,n,n,y,y
+Sean,m,45,asian,Washington,MI,48095,0,,2,y,y,38000,y,private,y,n,,n,,n
+Teresa,f,37,black,Ray,MI,48096,3,n,5,n,n,14000,n,public,y,n,y,n,y,n
+Ralph,m,34,black,Yale,MI,48097,2,y,4,y,y,42000,y,private,y,y,n,n,y,y
+Austin,m,23,hispanic,Troy,MI,48098,0,,1,y,n,10000,n,public,y,n,,n,,n
+Gloria,f,36,white,Allen Park,MI,48101,3,n,4,y,y,26000,n,public,y,n,n,y,n,n
+Janice,f,48,white,Ann Arbor,MI,48103,3,y,5,n,n,12000,n,public,n,n,y,n,n,n
+Roy,m,37,mixed,Ann Arbor,MI,48104,3,n,4,y,y,48000,n,public,y,n,y,n,y,n
+Theresa,f,49,other,Ann Arbor,MI,48105,1,n,2,y,y,9500,n,private,y,y,n,n,y,y
+Louis,m,32,hispanic,Ann Arbor,MI,48108,1,y,3,y,y,32000,y,private,y,n,n,n,n,n
+Noah,m,44,white,Ann Arbor,MI,48109,1,n,2,y,y,51275,y,private,y,n,n,y,n,n
+Bruce,m,28,white,Belleville,MI,48111,0,,2,y,y,38000,y,private,y,y,,y,,y
+Billy,m,36,white,Colfax,IA,50054,3,n,5,n,n,14000,n,public,y,y,y,y,y,n
+Judy,f,24,black,Collins,IA,50055,2,y,4,y,y,42000,y,private,y,n,n,y,n,n
+Bryan,m,19,black,Colo,IA,50056,3,y,5,y,n,8000,y,private,y,n,n,y,y,n
+Madison,m,30,black,Columbia,IA,50057,2,n,3,y,n,24000,y,private,y,n,n,y,n,n
+Eugene,f,22,mixed,Coon Rapids,IA,50058,2,y,4,y,y,37500,y,private,y,y,y,y,y,y
+Beverly,o,21,black,Corydon,IA,50060,0,,1,y,y,150000,n,public,y,n,,n,,
+Jordan,m,29,black,Cumming,IA,50061,2,y,4,y,y,35000,y,private,y,n,n,y,n,n
+Denise,f,26,mixed,Melcher Dallas,IA,50062,2,n,3,y,n,0,n,public,y,n,n,y,y,y
+Jane,o,25,black,Dallas Center,IA,50063,1,n,1,y,y,13250,n,public,y,n,n,n,n,y
+Marilyn,f,25,black,Dana,IA,50064,5,n,6,y,y,19500,n,public,y,n,n,n,y,y
+Amber,f,42,mixed,Davis City,IA,50065,2,n,3,y,y,16500,n,public,y,n,y,n,n,n
+Dylan,m,24,mixed,Dawson,IA,50066,3,n,1,y,y,11750,n,public,y,n,y,n,y,n
+Danielle,f,23,black,Decatur,IA,50067,0,,1,y,y,65000,y,private,y,y,,n,,y
+Abigail,f,27,hispanic,Saint Cloud,WI,53079,4,y,6,y,y,30000,n,private,y,n,n,n,n,n
+Wayne,m,18,mixed,Saukville,WI,53080,3,y,5,y,y,42500,y,public,y,n,n,y,n,n
+Irene,f,44,hispanic,Sheboygan,WI,53081,2,y,4,n,n,12000,n,public,y,y,n,n,n,y
+Ruby,o,35,hispanic,Sheboygan,WI,53083,0,,1,y,n,13500,n,public,y,y,,y,,y
+Annie,f,24,asian,Sheboygan Falls,WI,53085,0,,1,y,y,17650,n,public,y,y,,n,,y
+Sophia,o,23,hispanic,Slinger,WI,53086,0,,2,y,y,10000,n,public,y,y,,n,,y
+Alan,f,29,black,Stockbridge,WI,53088,1,n,1,y,y,13250,n,public,y,n,n,n,y,y
+Juan,f,48,hispanic,Sussex,WI,53089,5,n,6,y,y,19500,n,public,y,n,n,y,y,n
+Gabriel,m,46,mixed,West Bend,WI,53090,2,n,3,y,y,16500,n,public,y,n,n,n,y,n
+Howard,m,28,hispanic,Theresa,WI,53091,3,n,1,y,y,11750,n,public,y,y,n,n,y,y
+Fred,m,36,mixed,Mequon,WI,53092,0,,1,y,y,65000,y,private,y,n,,y,,y
+Vincent,m,34,asian,Waldo,WI,53093,4,y,6,y,y,30000,n,private,y,n,y,y,y,y
+Lori,f,43,white,Watertown,WI,53094,2,y,4,y,y,35000,n,public,y,n,n,n,y,n
+Philip,m,33,black,West Bend,WI,53095,2,n,3,y,y,12000,n,public,y,n,n,n,y,y
+Kayla,f,33,black,Mequon,WI,53097,3,n,4,y,n,13500,n,private,y,n,n,n,n,y
+Alexis,f,48,white,Westwego,LA,70094,1,n,2,n,n,12000,n,public,y,n,n,n,n,n
+Tiffany,f,33,native american,New Orleans,LA,70112,2,n,3,y,y,27000,n,public,y,y,y,y,y,y
+Florence,f,29,mixed,New Orleans,LA,70113,2,y,4,y,y,5000,n,public,y,n,y,y,y,n
+Isabella,f,48,hispanic,New Orleans,LA,70114,0,,1,y,y,7800,n,private,y,n,,y,,y
+Kathy,f,46,mixed,New Orleans,LA,70115,0,,1,y,n,9000,n,public,y,n,,n,,y
+Louise,f,28,asian,New Orleans,LA,70116,3,n,4,y,y,30000,n,public,y,n,n,n,y,y
+Logan,m,36,white,New Orleans,LA,70117,2,y,5,n,n,12000,n,public,n,n,y,n,n,n
+Lois,f,34,hispanic,New Orleans,LA,70118,3,n,4,y,y,41000,n,public,y,n,y,n,y,n
+Tammy,m,35,hispanic,New Orleans,LA,70119,1,n,2,y,y,10000,n,private,y,y,n,n,y,y
+Crystal,f,24,asian,New Orleans,LA,70121,1,y,3,y,y,32000,y,private,y,n,n,n,n,n
+Randy,m,23,hispanic,New Orleans,LA,70122,1,n,2,y,y,51275,y,private,y,n,n,y,n,n
+Bonnie,f,29,black,New Orleans,LA,70123,0,,2,y,y,38000,y,private,y,y,,y,,y
+Phyllis,f,48,hispanic,New Orleans,LA,70124,3,n,5,n,n,14000,n,public,y,y,y,y,y,n
+Anne,f,46,mixed,New Orleans,LA,70125,2,y,4,y,y,42000,y,private,y,n,n,y,n,n
+Taylor,m,28,hispanic,Noble,OK,73068,3,y,5,y,n,8000,y,private,y,n,n,y,y,n
+Alex,m,23,white,Davenport,IA,52806,0,,3,y,y,26000,n,private,y,n,,n,,n
+Damian,m,38,black,Portland,OR,97224,2,y,4,y,y,65000,y,private,y,n,n,y,y,y
+Larry,m,19,native american,Walhalla,ND,58282,0,NaN,3,y,n,5000,n,private,y,n,NaN,n,NaN,n
